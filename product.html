@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sage Pressed Cotton Suite | Foliage Studio</title>
+    <title>The Classic 4-Cheese Gold Combo | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <meta name="description"
+        content="Order our signature Classic 4-Cheese Gold Grilled Cheese Melt paired with slow-simmered roasted tomato bisque and crispy garlic herb tots.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -17,7 +20,7 @@
     <style>
         .product-page-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.1fr 1fr;
             gap: 4rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -31,42 +34,44 @@
 
         .product-main-img {
             width: 100%;
-            aspect-ratio: 4/5;
+            aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: var(--radius-lg);
-            border: 0.5px solid rgba(28, 20, 16, 0.08);
-            box-shadow: var(--shadow-press);
+            border: 1px solid rgba(211, 84, 0, 0.12);
+            box-shadow: var(--shadow-lift);
         }
 
         .product-details {
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
 
         .product-page-title {
             font-family: var(--font-display);
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-size: clamp(2.2rem, 3.5vw, 3.2rem);
             color: var(--text-ink);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             line-height: 1.1;
         }
 
         .product-page-price {
             font-family: var(--font-mono);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 700;
             color: var(--color-primary);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .product-desc {
             margin-bottom: 2rem;
             font-size: 1.05rem;
             color: var(--text-muted);
+            line-height: 1.7;
         }
 
         .quantity-selector {
             display: flex;
             align-items: center;
-            border: 1px solid var(--bg-deep);
+            border: 1px solid rgba(211,84,0,0.25);
             border-radius: var(--radius-sm);
             width: fit-content;
             margin-bottom: 2rem;
@@ -75,7 +80,7 @@
         .qty-btn {
             background: transparent;
             border: none;
-            padding: 10px 15px;
+            padding: 10px 16px;
             cursor: pointer;
             color: var(--text-ink);
             font-size: 1.2rem;
@@ -83,7 +88,7 @@
         }
 
         .qty-btn:hover {
-            background: var(--bg-surface);
+            background: var(--color-primary-light);
         }
 
         .qty-input {
@@ -93,24 +98,25 @@
             background: transparent;
             color: var(--text-ink);
             font-family: var(--font-body);
-            font-weight: 500;
+            font-weight: 700;
         }
 
         .product-action-row {
             display: flex;
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .product-action-row .btn-primary {
             flex: 1;
             padding: 16px;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
+            text-align: center;
         }
 
         .product-meta {
             border-top: 1px solid var(--bg-deep);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -119,20 +125,27 @@
         .meta-item {
             display: flex;
             gap: 1rem;
+            align-items: baseline;
         }
 
         .meta-label {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-ink);
-            min-width: 80px;
+            min-width: 110px;
             text-transform: uppercase;
             font-size: 0.75rem;
             letter-spacing: 0.1em;
         }
 
+        .meta-value {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 900px) {
             .product-page-layout {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .product-gallery {
@@ -145,21 +158,29 @@
 <body>
     <header class="site-header">
         <a href="index.html" class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Home 2</a>
-            <a href="shop.html">Shop</a>
-            <a href="product.html" class="active">Product</a>
-            <a href="about.html">About</a>
-            <a href="journal.html">Journal</a>
+            <a href="home-2.html">Find Truck</a>
+            <a href="shop.html">Menu</a>
+            <a href="pricing.html">Catering</a>
+            <a href="about.html">Our Story</a>
+            <a href="journal.html">Dispatch</a>
             <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-only btn-secondary">Booking Enquiry</a>
         </nav>
 
         <div class="header-actions">
@@ -172,15 +193,26 @@
                         <path d="m20 18-4 4-4-4" />
                     </svg>
                 </button>
-                <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
             </div>
 
             <div class="header-ctas">
-                <a href="login.html" class="btn-secondary">Wishlist</a>
+                <a href="contact.html" class="btn-secondary">Booking Enquiry</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -195,172 +227,134 @@
         </div>
     </header>
 
-    <main style="padding: 4rem 2rem;">
-        <div class="product-page-layout stagger-container">
-            <!-- Gallery -->
-            <div class="product-gallery stagger-item">
-                <img src="assets/images/prod_sage.png" alt="Sage Pressed Cotton Suite" class="product-main-img">
+    <main style="padding: 4rem 2rem 6rem;">
+        <div class="product-page-layout">
+            <!-- Left Gallery -->
+            <div class="product-gallery">
+                <img src="assets/images/hero_grilled_cheese.jpg" alt="The Classic 4-Cheese Gold Combo" class="product-main-img">
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin-top:1rem;">
+                    <img src="assets/images/truffle_bacon_melt.jpg" alt="Cheese Pull Detail" style="width:100%; height:120px; object-fit:cover; border-radius:var(--radius-md);">
+                    <img src="assets/images/food_truck_exterior.jpg" alt="Served Fresh from the Truck" style="width:100%; height:120px; object-fit:cover; border-radius:var(--radius-md);">
+                </div>
             </div>
 
-            <!-- Details -->
-            <div class="product-details stagger-item">
-                <h1 class="product-page-title">Sage Pressed Cotton Suite</h1>
-                <div class="product-page-price">$145.00</div>
+            <!-- Right Details -->
+            <div class="product-details">
+                <span style="display:inline-block; padding:0.3rem 0.8rem; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:4px; font-weight:700; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">
+                    ★ Chef's Signature Combo
+                </span>
+                <h1 class="product-page-title">The Classic 4-Cheese Gold Combo</h1>
+                <div class="product-page-price">$16.50</div>
 
-                <div class="product-desc">
-                    <p>A serene, earthy green suite infused with subtle botanical fragments. Each piece is pulled
-                        individually by hand, assuring a rich, natural deckled edge and an incomparable textural
-                        surface.</p>
-                    <p style="margin-top: 1rem;">Internally sized for calligraphy, fountain pen, and letterpress
-                        compatibility.</p>
+                <p class="product-desc">
+                    Our all-time best seller! Thick-sliced 36-hour bakery sourdough slathered in European grass-fed garlic herb butter, enveloping an unholy blend of sharp Wisconsin cheddar, Swiss Gruyère, Dutch smoked Gouda, and gooey Monterey Jack. Sizzled golden on the flat-top and served with our piping-hot roasted tomato soup dipper and crispy garlic parmesan tots.
+                </p>
+
+                <!-- Combo Options -->
+                <div style="margin-bottom:1.5rem; background:var(--bg-surface); padding:1.5rem; border-radius:var(--radius-md);">
+                    <label style="font-weight:700; font-size:0.85rem; text-transform:uppercase; color:var(--text-ink); display:block; margin-bottom:0.5rem;">Choose Bread</label>
+                    <select class="form-control" style="width:100%; padding:0.7rem; border-radius:var(--radius-sm); border:1px solid rgba(211,84,0,0.25); background:var(--bg-card); color:var(--text-ink);">
+                        <option>Rustic Country Sourdough (Recommended)</option>
+                        <option>Golden Toasted Brioche</option>
+                        <option>Gluten-Free Seeded Sourdough (+ $1.50)</option>
+                    </select>
+
+                    <label style="font-weight:700; font-size:0.85rem; text-transform:uppercase; color:var(--text-ink); display:block; margin:1rem 0 0.5rem;">Choose Included Side</label>
+                    <select class="form-control" style="width:100%; padding:0.7rem; border-radius:var(--radius-sm); border:1px solid rgba(211,84,0,0.25); background:var(--bg-card); color:var(--text-ink);">
+                        <option>Garlic Parmesan Crispy Tots</option>
+                        <option>Classic Sea Salt Fries</option>
+                        <option>Fried Mac &amp; Cheese Bites (+ $2.00)</option>
+                    </select>
                 </div>
 
-                <label style="display:block; margin-bottom: 0.5rem;">Quantity</label>
                 <div class="quantity-selector">
-                    <button class="qty-btn" aria-label="Decrease quantity">-</button>
-                    <input type="number" class="qty-input" value="1" min="1" aria-label="Quantity">
-                    <button class="qty-btn" aria-label="Increase quantity">+</button>
+                    <button class="qty-btn" onclick="let q=document.getElementById('pQty'); if(parseInt(q.value)>1) q.value=parseInt(q.value)-1;">−</button>
+                    <input type="text" value="1" id="pQty" class="qty-input" readonly>
+                    <button class="qty-btn" onclick="let q=document.getElementById('pQty'); q.value=parseInt(q.value)+1;">+</button>
                 </div>
 
                 <div class="product-action-row">
-                    <button class="btn-primary">Add to Collection</button>
-                    <button class="btn-secondary" style="padding: 16px 20px;" aria-label="Wishlist">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                        </svg>
-                    </button>
+                    <button class="btn-primary" onclick="alert('Added Classic 4-Cheese Gold Combo to order!');">Order Now at Truck</button>
+                    <a href="contact.html" class="btn-secondary" style="text-decoration:none; padding:16px 20px; font-size:0.85rem; text-align:center;">Cater This Item</a>
                 </div>
 
                 <div class="product-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Material</span>
-                        <span>100% Recycled Cotton Rag</span>
+                        <span class="meta-label">Included Dipper</span>
+                        <span class="meta-value">8oz Warm San Marzano Tomato Bisque with Sweet Basil</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Weight</span>
-                        <span>300 GSM</span>
+                        <span class="meta-label">Cheese Blend</span>
+                        <span class="meta-value">Aged White Cheddar, Swiss Gruyère, Smoked Gouda &amp; Monterey Jack</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Includes</span>
-                        <span>50 Sheets, Cards & Envelopes</span>
+                        <span class="meta-label">Allergens</span>
+                        <span class="meta-value">Dairy, Wheat (Gluten-free bread option available upon request)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Availability</span>
+                        <span class="meta-value">Daily at all truck stops &amp; private catering orders</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- PRODUCT SECTION 1: TACTILE DETAIL -->
-        <section class="section-overlap z-1 paper-texture" style="background:var(--bg-surface); padding: 8rem 2rem;">
-            <div class="grid grid-2 stagger-container" style="align-items: center;">
-                <div class="stagger-item">
-                    <img src="assets/images/prod_macro.png" alt="Macro Paper Texture"
-                        style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lift);">
-                </div>
-                <div class="stagger-item" style="padding-left: 2rem;">
-                    <h3>The Edge. The Fiber.</h3>
-                    <h2 style="margin: 1.5rem 0;">A Decidedly Tactile Experience</h2>
-                    <p>There is No substitute for the hand. Our Sage collection features a true natural deckle—the
-                        feathered, untamed border formed only at the moment of the vat pull. When your fingers meet
-                        these fibers, you'll understand why we refuse to trim our most precious lots.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRODUCT SECTION 2: USAGE / COMPATIBILITY -->
-        <section class="section-overlap z-2"
-            style="background:var(--bg-primary); padding: 6rem 2rem; margin-top: -40px;">
-            <div class="section-divider-top divider-bg-primary">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="grid grid-2 stagger-container" style="align-items: center;">
-                <div class="stagger-item" style="padding-right: 2rem;">
-                    <h3>For the Scribe</h3>
-                    <h2 style="margin: 1.5rem 0;">Internally Sized for Ink</h2>
-                    <p>Unlike raw pulp, our paper is delicately sized to ensure compatibility with traditional fountain
-                        pen inks, calligraphy nibs, and heavy letterpress impressions. Every stroke remains crisp,
-                        resisting spidering and bleed-through while celebrating the slight resistance of the cotton
-                        fluff.</p>
-                </div>
-                <div class="stagger-item">
-                    <img src="assets/images/prod_writing.png" alt="Calligraphy on Handmade Paper"
-                        style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lift);">
-                </div>
-            </div>
-        </section>
-
-        <!-- PRODUCT SECTION 3: HERITAGE -->
-        <section class="section-overlap z-3"
-            style="background:var(--bg-surface); padding: 8rem 2rem; margin-top: -50px;">
-            <div class="section-divider-top divider-bg-surface">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="stagger-container" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h3 class="stagger-item">Earth's Own Palette</h3>
-                <h2 class="stagger-item" style="margin: 1rem 0;">Archival Cotton Heritage</h2>
-                <p class="stagger-item">Pulped from 100% recycled cotton textile offcuts, our 300 GSM Sage suite is
-                    naturally archival. It contains no bleach, no acid, and no artificial lignin. It is paper built to
-                    be archived—holding your memories as vividly in a century as it does today.</p>
-                <div class="stagger-item" style="margin-top: 3rem;">
-                    <img src="assets/images/prod_heritage.png" alt="Raw Cotton Heritage"
-                        style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-float);">
-                </div>
-            </div>
-        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                        <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="12" x="2" y="5" rx="2" />
+                        <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                        <circle cx="7" cy="18" r="2" fill="currentColor" />
+                        <circle cx="17" cy="18" r="2" fill="currentColor" />
+                        <path d="M6 9h4" />
+                        <path d="M14 9h4" />
+                        <path d="M9 18h6" />
+                        <path d="M9 2v3" />
+                        <path d="M15 2v3" />
                     </svg>
-                    Foliage Studio
+                    MELTY
                 </div>
-                <p>Pressed. Crafted. Remembered.</p>
+                <p>Nostalgic street comfort elevated to gourmet standards. Sizzling artisanal grilled cheese combos, rich roasted tomato bisque, and loaded comfort sides served hot from our retro truck across the city.</p>
             </div>
 
             <div>
                 <h3 class="footer-title">Explore</h3>
                 <nav class="footer-links">
-                    <a href="shop.html">Shop All</a>
-                    <a href="home-2.html">Premium Layout</a>
-                    <a href="product.html">Product Demo</a>
-                    <a href="pricing.html">Pricing Strategy</a>
+                    <a href="shop.html">Full Food Truck Menu</a>
+                    <a href="home-2.html">Find the Truck (Schedule)</a>
+                    <a href="product.html">Signature Combo Detail</a>
+                    <a href="pricing.html">Catering &amp; Party Packages</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">Studio</h3>
+                <h3 class="footer-title">The Truck</h3>
                 <nav class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Sign Up</a>
+                    <a href="about.html">Our Truck Story</a>
+                    <a href="journal.html">Truck Dispatch</a>
+                    <a href="contact.html">Book The Truck</a>
+                    <a href="login.html">Melt Club VIP Login</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">The Journal</h3>
-                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Sign up for studio updates and exclusive releases.
+                <h3 class="footer-title">Melt Alert Club</h3>
+                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Get secret melt drop alerts, weekly truck stops, and 10% off your first combo!
                 </p>
                 <form class="newsletter-form" onsubmit="event.preventDefault()">
-                    <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+                        aria-label="Email Address">
+                    <button type="submit" class="newsletter-btn">Join Club</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Foliage Studio. All rights reserved.</p>
+            <p>&copy; 2026 MELTY — Gourmet Grilled Cheese &amp; Comfort Food Truck. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#" class="social-icon social-facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24">
@@ -390,6 +384,12 @@
             </div>
         </div>
     </footer>
+
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>

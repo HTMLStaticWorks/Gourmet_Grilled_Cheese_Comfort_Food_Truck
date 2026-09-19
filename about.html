@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Foliage Studio</title>
+    <title>Our Story | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <meta name="description"
+        content="Learn the story of our retro gourmet grilled cheese food truck. Discover how our passion for artisan sourdough, farm cheeses, and nostalgic comfort food began.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/script.js" defer></script>
     <style>
-        /* Unique Animations for About Page */
         .reveal-right {
             opacity: 0;
             transform: translateX(-50px);
@@ -36,7 +38,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: scale(1.2);
+            transform: scale(1.1);
             transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
@@ -44,28 +46,10 @@
             transform: scale(1);
         }
 
-        .float-pulse {
-            animation: aboutFloatPulse 6s ease-in-out infinite;
-        }
-
-        @keyframes aboutFloatPulse {
-            0% {
-                transform: translateY(0) scale(1);
-            }
-
-            50% {
-                transform: translateY(-15px) scale(1.02);
-            }
-
-            100% {
-                transform: translateY(0) scale(1);
-            }
-        }
-
         .about-values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+            gap: 2.5rem;
             margin-top: 4rem;
         }
 
@@ -74,10 +58,11 @@
             padding: 3rem 2rem;
             text-align: center;
             border-radius: var(--radius-lg);
-            border: 0.5px solid rgba(28, 20, 16, 0.08);
+            border: 1px solid rgba(211, 84, 0, 0.1);
             position: relative;
             z-index: 1;
             overflow: hidden;
+            box-shadow: var(--shadow-float);
         }
 
         .value-card::before {
@@ -112,28 +97,35 @@
     </style>
 </head>
 
-<body>
+<body class="about-page">
     <header class="site-header">
         <a href="index.html" class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Home 2</a>
-            <a href="shop.html">Shop</a>
-            <a href="product.html">Product</a>
-            <a href="about.html" class="active">About</a>
-            <a href="journal.html">Journal</a>
+            <a href="home-2.html">Find Truck</a>
+            <a href="shop.html">Menu</a>
+            <a href="pricing.html">Catering</a>
+            <a href="about.html" class="active">Our Story</a>
+            <a href="journal.html">Dispatch</a>
             <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-only btn-secondary">Booking Enquiry</a>
         </nav>
 
         <div class="header-actions">
-            <!-- Toggles -->
             <div class="header-icons">
                 <button class="header-icon rtl-toggle" aria-label="Toggle RTL">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -143,15 +135,26 @@
                         <path d="m20 18-4 4-4-4" />
                     </svg>
                 </button>
-                <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
             </div>
 
             <div class="header-ctas">
-                <a href="login.html" class="btn-secondary">Wishlist</a>
+                <a href="contact.html" class="btn-secondary">Booking Enquiry</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -167,169 +170,152 @@
     </header>
 
     <main>
-        <!-- ABOUT SECTION 1: UNIQUE HERO TEXT REVEAL -->
-        <section class="page-header paper-texture stagger-container" style="padding-bottom: 8rem; position: relative;">
-            <svg class="floating-sheet-svg float-pulse" style="left: 10%; top: 20%; opacity: 0.3;"
-                viewBox="0 0 100 100">
-                <path d="M80 10 L20 30 L30 90 L90 70 Z" fill="var(--color-primary-light)" />
-            </svg>
-
-            <h1 class="stagger-item reveal-right" style="font-size: clamp(3rem, 7vw, 6rem);">The Hands<br>Behind the Vat
-            </h1>
-            <p class="stagger-item"
-                style="margin-top:1rem; max-width: 600px; margin-left:auto; margin-right:auto; font-size: 1.2rem;">
-                Every sheet tells a story of intention, water, and time.
-            </p>
-        </section>
-
-        <!-- ABOUT SECTION 2: SLOW ZOOM PROCESS -->
-        <section class="section-overlap z-2" style="background:var(--bg-surface);">
-            <div class="section-divider-top divider-bg-surface">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
-                        class="shape-fill" opacity=".25" />
-                    <path
-                        d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5V0z"
-                        class="shape-fill" opacity=".5" />
-                    <path
-                        d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-8.13 84.6-24.22 127.32-34.42C645.72-2.19 686.91 1 729 9c42.86 8.1 85.63 21.84 128.53 29.8 40.85 7.57 82 4.19 123.1-2.9C1043.14 24.57 1121.24 9 1200 24.83V0z"
-                        class="shape-fill" />
-                </svg>
-            </div>
-
-            <div class="grid grid-2 stagger-container" style="align-items: center;">
-                <div class="slow-zoom stagger-item" style="height: 500px;">
-                    <img src="assets/images/about_methodology.png" alt="Studio Process">
-                </div>
-                <div class="stagger-item" style="padding: 2rem;">
-                    <h3 style="color:var(--text-ink);">The Methodology</h3>
-                    <h2 style="margin-bottom: 2rem; color: var(--color-primary);">Reclaiming the Archival</h2>
-                    <p>We source premium textile offcuts, breaking them down into natural cotton fibers. Through a
-                        painstaking process of water immersion, pressing, and slow drying, we transform discarded
-                        remnants into heirloom canvases waiting for your pen.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION 3: ANIMATED VALUES GRID -->
-        <section class="section-overlap z-3 paper-texture" style="background:var(--bg-primary);">
-            <div class="section-divider-top divider-bg-primary">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-
-            <div class="stagger-container" style="text-align: center; max-width: 1000px; margin: 0 auto;">
-                <h2 class="stagger-item">Our Core Axioms</h2>
-                <div class="about-values-grid">
-                    <div class="value-card stagger-item">
-                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v20" />
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                        </svg>
-                        <h3 style="margin-top: 1rem; font-family:var(--font-display); font-size:1.8rem;">Sustainability
-                        </h3>
-                        <p style="margin-top: 0.5rem;">Foraging local botanicals and utilizing zero-chemical pulp
-                            reduction.</p>
+        <section class="page-header page-header--split paper-texture stagger-container">
+            <div class="page-header-grid">
+                <div class="page-header-content">
+                    <div class="hero-tag-badge">
+                        <span class="tag-dot"></span> The Sizzle Journey Since 2021
                     </div>
-                    <div class="value-card stagger-item">
-                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
-                        <h3 style="margin-top: 1rem; font-family:var(--font-display); font-size:1.8rem;">Tactility</h3>
-                        <p style="margin-top: 0.5rem;">Ensuring every sheet has the weight and tooth to challenge
-                            digital perfection.</p>
+                    <h1>Born On The Sizzle</h1>
+                    <p>How a retro food truck and an obsession with bubbling artisan cheese became the city's happiest mobile comfort food destination.</p>
+                </div>
+                <div class="page-header-media">
+                    <div class="page-header-img-wrap">
+                        <img src="assets/images/hero_grilled_cheese.jpg" alt="Born On The Sizzle - Melty Story" class="page-header-img">
                     </div>
-                    <div class="value-card stagger-item">
-                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                        <h3 style="margin-top: 1rem; font-family:var(--font-display); font-size:1.8rem;">Longevity</h3>
-                        <p style="margin-top: 0.5rem;">Archival sizing means your words outlast generations.</p>
+                    <div class="hero-floating-badge">
+                        <div class="floating-badge-icon">🚚</div>
+                        <div class="floating-badge-text">
+                            <strong>Born on City Streets</strong>
+                            <span>Handcrafted with 100% real farm cheeses</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION 4: FULL WIDTH CTA DEEP -->
-        <section class="section-overlap z-4"
-            style="background:var(--bg-dark); color: #F7F0E6; padding: 6rem 2rem; margin-top: -60px; text-align: center;">
-            <div class="section-divider-top" style="fill:var(--bg-dark);">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        fill="var(--bg-dark)"></path>
-                </svg>
+        <!-- Values Section -->
+        <section style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;" class="stagger-container">
+            <div style="text-align: center;">
+                <h3 class="stagger-item" style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em;">The Food Truck Creed</h3>
+                <h2 class="stagger-item" style="font-size:clamp(2rem, 4vw, 3rem); margin-top:0.5rem;">The Three Pillars of Sizzle</h2>
             </div>
 
-            <div class="stagger-container float-pulse"
-                style="max-width: 600px; margin: 0 auto; position: relative; z-index: 2;">
-                <h2 class="stagger-item" style="color:var(--color-primary); font-size: 3rem; margin-bottom: 1rem;">
-                    Experience the Grain</h2>
-                <p class="stagger-item" style="color: var(--text-faint); margin-bottom: 2rem;">Holding it changes
-                    everything. Commission a custom batch today.</p>
-                <a href="contact.html" class="btn-primary stagger-item">Get in Touch</a>
+            <div class="about-values-grid">
+                <div class="value-card stagger-item">
+                    <h3 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:1rem; color:var(--text-ink);">100% Real Farm Cheeses</h3>
+                    <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">No processed cheese squares ever. We hand-grate sharp Wisconsin cheddar, nut-scented Swiss Gruyère, and velvety Dutch Gouda for the ultimate stringy stretch.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <h3 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:1rem; color:var(--text-ink);">Bakery-Fresh Sourdough</h3>
+                    <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">Naturally fermented 36-hour country sourdough baked fresh each morning by our local baker friends, sliced thick and toasted in European garlic butter.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <h3 style="font-family:var(--font-display); font-size:1.8rem; margin-bottom:1rem; color:var(--text-ink);">Nostalgia in Every Bite</h3>
+                    <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.6;">Remember coming inside from the cold to a hot grilled cheese cut into triangles? We recreate that warmth with modern chef precision and piping tomato soup.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Story Split Section -->
+        <section class="section-overlap z-2" style="background:var(--bg-surface); padding: 6rem 2rem;">
+            <div style="max-width: 1200px; margin: 0 auto; display:grid; grid-template-columns: 1fr 1fr; gap:4rem; align-items:center;">
+                <div>
+                    <h3 style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.5rem;">From Dream to Wheels</h3>
+                    <h2 style="font-size:clamp(2rem, 3.5vw, 2.8rem); margin-bottom:1.5rem; line-height:1.2;">How We Built The Ultimate Melt Truck</h2>
+                    <p style="color:var(--text-muted); margin-bottom:1.5rem; line-height:1.8;">
+                        It started back in 2018 when two culinary school roommates realized the world took fine dining too seriously and comfort food not seriously enough. Why shouldn't a grilled cheese receive the same obsessive craftsmanship as a Michelin-star reduction?
+                    </p>
+                    <p style="color:var(--text-muted); margin-bottom:2rem; line-height:1.8;">
+                        We bought a retired vintage yellow utility van, stripped it down to the frame, installed a roaring commercial flat-top griddle and a soup kettle, and hit the streets. Today, our food truck feeds thousands of smiling people every week across downtown squares, neighborhood breweries, and private wedding lawns.
+                    </p>
+                    <a href="home-2.html" class="btn-primary">Find Our Daily Stops</a>
+                </div>
+                <div class="slow-zoom" style="box-shadow:var(--shadow-lift);">
+                    <img src="assets/images/food_truck_exterior.jpg" alt="Our Retro Food Truck on Location">
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Craft Section -->
+        <section style="padding: 6rem 2rem; max-width:1200px; margin:0 auto; text-align:center;">
+            <h3 style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.5rem;">The Magic Formula</h3>
+            <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:1.5rem;">The Anatomy of a Perfect Melt</h2>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; margin-top:3rem;">
+                <div style="background:var(--bg-card); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(211,84,0,0.1); box-shadow:var(--shadow-float);">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🍞</div>
+                    <h4 style="font-size:1.3rem; margin-bottom:0.5rem;">The Crunch</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">Thick-cut country sourdough griddled slowly on medium heat with garlic butter to achieve an audible crackle without scorching.</p>
+                </div>
+                <div style="background:var(--bg-card); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(211,84,0,0.1); box-shadow:var(--shadow-float);">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🧀</div>
+                    <h4 style="font-size:1.3rem; margin-bottom:0.5rem;">The Cheese Ratio</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">The ideal blend: sharp cheddar for bold bite, Gruyère for nutty meltability, and gouda for creaminess that pulls like molten silk.</p>
+                </div>
+                <div style="background:var(--bg-card); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(211,84,0,0.1); box-shadow:var(--shadow-float);">
+                    <div style="font-size:2.5rem; margin-bottom:0.5rem;">🍅</div>
+                    <h4 style="font-size:1.3rem; margin-bottom:0.5rem;">The Dip</h4>
+                    <p style="color:var(--text-muted); font-size:0.9rem;">Italian San Marzano plum tomatoes flame-roasted and reduced with basil, garlic, and cream for the ultimate sandwich dunk.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                        <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="12" x="2" y="5" rx="2" />
+                        <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                        <circle cx="7" cy="18" r="2" fill="currentColor" />
+                        <circle cx="17" cy="18" r="2" fill="currentColor" />
+                        <path d="M6 9h4" />
+                        <path d="M14 9h4" />
+                        <path d="M9 18h6" />
+                        <path d="M9 2v3" />
+                        <path d="M15 2v3" />
                     </svg>
-                    Foliage Studio
+                    MELTY
                 </div>
-                <p>Pressed. Crafted. Remembered.</p>
+                <p>Nostalgic street comfort elevated to gourmet standards. Sizzling artisanal grilled cheese combos, rich roasted tomato bisque, and loaded comfort sides served hot from our retro truck across the city.</p>
             </div>
 
             <div>
                 <h3 class="footer-title">Explore</h3>
                 <nav class="footer-links">
-                    <a href="shop.html">Shop All</a>
-                    <a href="home-2.html">Premium Layout</a>
-                    <a href="product.html">Product Demo</a>
-                    <a href="pricing.html">Pricing Strategy</a>
+                    <a href="shop.html">Full Food Truck Menu</a>
+                    <a href="home-2.html">Find the Truck (Schedule)</a>
+                    <a href="product.html">Signature Combo Detail</a>
+                    <a href="pricing.html">Catering &amp; Party Packages</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">Studio</h3>
+                <h3 class="footer-title">The Truck</h3>
                 <nav class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Sign Up</a>
+                    <a href="about.html">Our Truck Story</a>
+                    <a href="journal.html">Truck Dispatch</a>
+                    <a href="contact.html">Book The Truck</a>
+                    <a href="login.html">Melt Club VIP Login</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">The Journal</h3>
-                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Sign up for studio updates and exclusive releases.
+                <h3 class="footer-title">Melt Alert Club</h3>
+                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Get secret melt drop alerts, weekly truck stops, and 10% off your first combo!
                 </p>
                 <form class="newsletter-form" onsubmit="event.preventDefault()">
-                    <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+                        aria-label="Email Address">
+                    <button type="submit" class="newsletter-btn">Join Club</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Foliage Studio. All rights reserved.</p>
+            <p>&copy; 2026 MELTY — Gourmet Grilled Cheese &amp; Comfort Food Truck. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#" class="social-icon social-facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24">
@@ -360,24 +346,11 @@
         </div>
     </footer>
 
-    <!-- Run observer for custom elements just in case, but they are bound by script.js -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const extraObserverOptions = { threshold: 0.2 };
-            const extraObserver = new IntersectionObserver((entries, obs) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, extraObserverOptions);
-
-            document.querySelectorAll('.reveal-right, .slow-zoom').forEach(el => {
-                extraObserver.observe(el);
-            });
-        });
-    </script>
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>

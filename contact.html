@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Studio | Foliage Studio</title>
+    <title>Contact &amp; Food Truck Booking | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <meta name="description"
+        content="Book our gourmet grilled cheese food truck for your next event or submit catering orders. Fill out our booking enquiry form to reserve your date.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,25 +22,32 @@
 <body>
     <header class="site-header">
         <a href="index.html" class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Home 2</a>
-            <a href="shop.html">Shop</a>
-            <a href="product.html">Product</a>
-            <a href="about.html">About</a>
-            <a href="journal.html">Journal</a>
+            <a href="home-2.html">Find Truck</a>
+            <a href="shop.html">Menu</a>
+            <a href="pricing.html">Catering</a>
+            <a href="about.html">Our Story</a>
+            <a href="journal.html">Dispatch</a>
             <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html" class="mobile-only btn-secondary">Booking Enquiry</a>
         </nav>
 
         <div class="header-actions">
-            <!-- Toggles -->
             <div class="header-icons">
                 <button class="header-icon rtl-toggle" aria-label="Toggle RTL">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -47,15 +57,26 @@
                         <path d="m20 18-4 4-4-4" />
                     </svg>
                 </button>
-                <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
             </div>
 
             <div class="header-ctas">
-                <a href="login.html" class="btn-secondary">Wishlist</a>
+                <a href="contact.html" class="btn-secondary">Booking Enquiry</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -71,36 +92,78 @@
     </header>
 
     <main>
-        <section class="page-header paper-texture stagger-container">
-            <h1 class="stagger-item">Start a Dialogue</h1>
-            <p class="stagger-item" style="margin-top:1rem; max-width: 600px; margin-left:auto; margin-right:auto;">For
-                bespoke commissions, wholesale inquiries, or just to say hello, we are always eager to connect over a
-                shared love of paper.</p>
+        <section class="page-header page-header--split paper-texture stagger-container">
+            <div class="page-header-grid">
+                <div class="page-header-content">
+                    <div class="hero-tag-badge">
+                        <span class="tag-dot"></span> Fast Catering &amp; Event Booking
+                    </div>
+                    <h1>Book The Food Truck</h1>
+                    <p>Ready to bring hot sizzling gourmet grilled cheese and comforting tomato soup to your wedding, company picnic, or festival? Tell us about your event below!</p>
+                </div>
+                <div class="page-header-media">
+                    <div class="page-header-img-wrap">
+                        <img src="assets/images/food_truck_exterior.jpg" alt="Book The Melty Food Truck" class="page-header-img">
+                    </div>
+                    <div class="hero-floating-badge">
+                        <div class="floating-badge-icon">⚡</div>
+                        <div class="floating-badge-text">
+                            <strong>Quick 24h Response</strong>
+                            <span>Custom menu proposals &amp; pricing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="stagger-container" style="padding: 4rem 2rem 8rem;">
+        <section class="stagger-container" style="padding: 3rem 1rem 6rem;">
             <div class="contact-grid stagger-item">
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <h3 style="margin-bottom: 2rem; color:var(--text-ink);">Send an Inquiry</h3>
-                    <form onsubmit="event.preventDefault()">
+                    <h3 style="margin-bottom: 2rem; color:var(--text-ink); text-align: center;">Truck Booking &amp; Catering Enquiry</h3>
+
+                    <form id="truckBookingForm" onsubmit="event.preventDefault(); document.getElementById('bookingSuccess').style.display='block';">
                         <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" required>
+                            <label>Your Name</label>
+                            <input type="text" class="form-control" placeholder="e.g. Alex Miller" required>
                         </div>
                         <div class="form-group">
                             <label>Email Address</label>
-                            <input type="email" class="form-control" required>
+                            <input type="email" class="form-control" placeholder="e.g. alex@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label>Subject</label>
-                            <input type="text" class="form-control" required>
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="e.g. (503) 555-0198" required>
                         </div>
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea class="form-control" required></textarea>
+                            <label>Enquiry Type</label>
+                            <select class="form-control" style="background:var(--bg-card); color:var(--text-ink); border:1px solid rgba(211,84,0,0.2); padding:0.75rem; border-radius:var(--radius-sm);" required>
+                                <option value="catering">Private Food Truck Booking (Birthdays / Parties)</option>
+                                <option value="corporate">Corporate Lunch Catering (Office / Tech Campus)</option>
+                                <option value="wedding">Wedding Late-Night Melt Bar</option>
+                                <option value="festival">Festival / Community Market Invitation</option>
+                                <option value="general">General Question / Dietary Inquiries</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+                            <div class="form-group">
+                                <label>Event Date</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Estimated Guests</label>
+                                <input type="number" class="form-control" placeholder="e.g. 50">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Event Details &amp; Location</label>
+                            <textarea class="form-control" rows="4" placeholder="Tell us about your event location, timing, or special dietary requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%;">Submit Booking Enquiry</button>
+                        
+                        <div id="bookingSuccess" style="display:none; margin-top:1.5rem; padding:1rem; background:var(--status-success-bg); color:var(--status-success); border-radius:var(--radius-sm); text-align:center; font-weight:600;">
+                            🧀 Sizzle Received! Our catering coordinator will contact you within 24 hours with custom menu options and pricing.
+                        </div>
                     </form>
                 </div>
 
@@ -115,9 +178,8 @@
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
                             <div>
-                                <label style="color:var(--text-faint);">Address</label>
-                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">124 Paper Mill
-                                    Road<br>Portland, OR 97205</p>
+                                <label style="color:var(--text-faint);">Food Truck HQ &amp; Commissary</label>
+                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">420 Sizzling Melt Way<br>Portland, OR 97201</p>
                             </div>
                         </div>
 
@@ -129,9 +191,8 @@
                                 <path d="M12 18h.01" />
                             </svg>
                             <div>
-                                <label style="color:var(--text-faint);">Phone</label>
-                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">+1 (503) 555-0198
-                                </p>
+                                <label style="color:var(--text-faint);">Truck Booking Hotline</label>
+                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">+1 (503) 555-MELT (6358)</p>
                             </div>
                         </div>
 
@@ -143,53 +204,44 @@
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
                             <div>
-                                <label style="color:var(--text-faint);">Email</label>
-                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">
-                                    hello@foliagestudio.com</p>
+                                <label style="color:var(--text-faint);">Catering Direct Email</label>
+                                <p style="color:var(--text-ink); font-weight:500; line-height:1.4;">catering@gourmetgrilledcheesetruck.com</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Styled Google Map Embed (grayscale + sepia through CSS .contact-map) -->
-                    <div class="contact-map">
+                    <!-- Styled Google Map Embed -->
+                    <div class="contact-map" style="margin-top:2rem;">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89481.33230623696!2d-122.74838382496735!3d45.54286762395562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1689253457193!5m2!1sen!2sus"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                     <!-- SOCIAL CONNECTIVITY SECTION -->
-                    <div
-                        style="margin-top: 4rem; padding: 3rem; background: var(--bg-card); border-radius: var(--radius-lg); text-align: center;">
+                    <div class="contact-social-card" style="margin-top: 3rem; text-align: center;">
                         <h4
-                            style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; color: var(--color-primary); margin-bottom: 2rem;">
-                            Follow the Journey</h4>
-                        <div style="display: flex; justify-content: center; gap: 3rem;">
-                            <a href="#"
-                                style="color: #E4405F; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            style="text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.75rem; color: var(--color-primary); margin-bottom: 1.5rem;">
+                            Follow The Truck Daily</h4>
+                        <div class="social-links-wrap" style="display: flex; justify-content: center; gap: 1.5rem;">
+                            <a href="#" style="color: var(--color-primary); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                                 </svg>
-                                <span
-                                    style="font-size: 0.7rem; font-weight: 500; font-family: var(--font-mono);">Instagram</span>
+                                <span style="font-size: 0.7rem; font-weight: 600; font-family: var(--font-mono);">Instagram</span>
                             </a>
-                            <a href="#"
-                                style="color: #BD081C; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12.017 0c-6.627 0-12 5.373-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.091.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" />
+                            <a href="#" style="color: var(--color-secondary); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                                 </svg>
-                                <span
-                                    style="font-size: 0.7rem; font-weight: 500; font-family: var(--font-mono);">Pinterest</span>
+                                <span style="font-size: 0.7rem; font-weight: 600; font-family: var(--font-mono);">Facebook</span>
                             </a>
-                            <a href="#"
-                                style="color: #0077B5; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            <a href="#" style="color: var(--color-primary-dark); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-decoration: none;">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <path d="M4 4l16 16M4 20L20 4" />
                                 </svg>
-                                <span
-                                    style="font-size: 0.7rem; font-weight: 500; font-family: var(--font-mono);">LinkedIn</span>
+                                <span style="font-size: 0.7rem; font-weight: 600; font-family: var(--font-mono);">X (Twitter)</span>
                             </a>
                         </div>
                     </div>
@@ -198,52 +250,61 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                        <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="12" x="2" y="5" rx="2" />
+                        <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                        <circle cx="7" cy="18" r="2" fill="currentColor" />
+                        <circle cx="17" cy="18" r="2" fill="currentColor" />
+                        <path d="M6 9h4" />
+                        <path d="M14 9h4" />
+                        <path d="M9 18h6" />
+                        <path d="M9 2v3" />
+                        <path d="M15 2v3" />
                     </svg>
-                    Foliage Studio
+                    MELTY
                 </div>
-                <p>Pressed. Crafted. Remembered.</p>
+                <p>Nostalgic street comfort elevated to gourmet standards. Sizzling artisanal grilled cheese combos, rich roasted tomato bisque, and loaded comfort sides served hot from our retro truck across the city.</p>
             </div>
 
             <div>
                 <h3 class="footer-title">Explore</h3>
                 <nav class="footer-links">
-                    <a href="shop.html">Shop All</a>
-                    <a href="home-2.html">Premium Layout</a>
-                    <a href="product.html">Product Demo</a>
-                    <a href="pricing.html">Pricing Strategy</a>
+                    <a href="shop.html">Full Food Truck Menu</a>
+                    <a href="home-2.html">Find the Truck (Schedule)</a>
+                    <a href="product.html">Signature Combo Detail</a>
+                    <a href="pricing.html">Catering &amp; Party Packages</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">Studio</h3>
+                <h3 class="footer-title">The Truck</h3>
                 <nav class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Sign Up</a>
+                    <a href="about.html">Our Truck Story</a>
+                    <a href="journal.html">Truck Dispatch</a>
+                    <a href="contact.html">Book The Truck</a>
+                    <a href="login.html">Melt Club VIP Login</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">The Journal</h3>
-                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Sign up for studio updates and exclusive releases.
+                <h3 class="footer-title">Melt Alert Club</h3>
+                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Get secret melt drop alerts, weekly truck stops, and 10% off your first combo!
                 </p>
                 <form class="newsletter-form" onsubmit="event.preventDefault()">
-                    <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+                        aria-label="Email Address">
+                    <button type="submit" class="newsletter-btn">Join Club</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Foliage Studio. All rights reserved.</p>
-            <!-- MANDATORY FOOTER ICONS -->
+            <p>&copy; 2026 MELTY — Gourmet Grilled Cheese &amp; Comfort Food Truck. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#" class="social-icon social-facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24">
@@ -273,6 +334,12 @@
             </div>
         </div>
     </footer>
+
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>

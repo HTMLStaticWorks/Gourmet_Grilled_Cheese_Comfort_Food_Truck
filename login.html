@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Foliage Studio</title>
+    <title>Melt Club VIP Login | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -18,7 +19,7 @@
 
 <body class="auth-page">
     <div class="auth-card">
-        <!-- Toggles at top right of card (or left in RTL) -->
+        <!-- Toggles -->
         <div class="auth-toggles">
             <button class="header-icon rtl-toggle" aria-label="Toggle RTL">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -29,23 +30,41 @@
                     <path d="m20 18-4 4-4-4" />
                 </svg>
             </button>
-            <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M12 2v2" />
+                    <path d="M12 20v2" />
+                    <path d="m4.93 4.93 1.41 1.41" />
+                    <path d="m17.66 17.66 1.41 1.41" />
+                    <path d="M2 12h2" />
+                    <path d="M20 12h2" />
+                    <path d="m6.34 17.66-1.41 1.41" />
+                    <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
         </div>
 
         <a href="index.html" class="auth-logo brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
-        <h1 class="auth-title h2" style="font-size: 2.2rem;">Welcome Back</h1>
+        <h1 class="auth-title h2" style="font-size: 2.2rem;">Melt Club VIP Login</h1>
+        <div class="auth-subtitle">Sign in to redeem cheese rewards, track the truck, and skip the line!</div>
 
         <button class="social-login-btn">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -78,7 +97,7 @@
         <form action="#" method="POST" onsubmit="event.preventDefault()">
             <div class="form-group" style="text-align: left;">
                 <label>Email address</label>
-                <input type="email" class="form-control" required>
+                <input type="email" class="form-control" placeholder="you@example.com" required>
             </div>
             <div class="form-group" style="text-align: left;">
                 <label>Password</label>
@@ -102,12 +121,18 @@
                 <a href="#" style="color:var(--color-primary); font-size:0.85rem;">Forgot password?</a>
             </div>
 
-            <button type="submit" class="btn-primary">Sign In to Studio</button>
+            <button type="submit" class="btn-primary">Sign In to Melt Club</button>
         </form>
 
         <p class="auth-sub">Don't have an account? <a href="register.html"
-                style="color:var(--color-primary); font-weight:500;">Create one</a></p>
+                style="color:var(--color-primary); font-weight:700;">Join the Melt Club</a></p>
     </div>
+
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>

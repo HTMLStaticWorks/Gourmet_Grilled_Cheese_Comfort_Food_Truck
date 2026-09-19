@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Foliage Studio</title>
+    <title>Food Truck Menu | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <meta name="description"
+        content="Explore our full food truck menu: signature grilled cheese melts, creamy tomato bisque dippers, loaded parmesan tots, and comfort combos made fresh on the griddle.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,21 +22,29 @@
 <body>
     <header class="site-header">
         <a href="index.html" class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Home 2</a>
-            <a href="shop.html" class="active">Shop</a>
-            <a href="product.html">Product</a>
-            <a href="about.html">About</a>
-            <a href="journal.html">Journal</a>
+            <a href="home-2.html">Find Truck</a>
+            <a href="shop.html" class="active">Menu</a>
+            <a href="pricing.html">Catering</a>
+            <a href="about.html">Our Story</a>
+            <a href="journal.html">Dispatch</a>
             <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-only btn-secondary">Booking Enquiry</a>
         </nav>
 
         <div class="header-actions">
@@ -46,15 +57,26 @@
                         <path d="m20 18-4 4-4-4" />
                     </svg>
                 </button>
-                <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
             </div>
 
             <div class="header-ctas">
-                <a href="login.html" class="btn-secondary">Wishlist</a>
+                <a href="contact.html" class="btn-secondary">Booking Enquiry</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -72,56 +94,64 @@
     <main>
         <!-- PAGE HEADER -->
         <section class="page-header paper-texture stagger-container">
-            <h1 class="stagger-item">The Complete Collection</h1>
-            <p class="stagger-item" style="margin-top:1rem; max-width: 600px; margin-left:auto; margin-right:auto;">
-                Discover our handcrafted paper goods, milled with tradition and designed with deliberate slowness.</p>
+            <h1 class="stagger-item">The Food Truck Menu</h1>
+            <p class="stagger-item" style="margin-top:1rem; max-width: 650px; margin-left:auto; margin-right:auto;">
+                Artisanal grilled cheese melts, rich tomato bisque dippers, and loaded comfort sides pressed to order on our seasoned chrome griddle.</p>
         </section>
 
         <!-- SHOP LAYOUT -->
-        <section class="stagger-container" style="padding: 4rem 2rem;">
-            <div class="shop-layout stagger-item">
+        <section style="padding: 4rem 2rem; max-width: 1440px; margin: 0 auto;">
+            <!-- Mobile Filter Toggle -->
+            <button id="filterToggleBtn" class="filter-toggle-btn mobile-only btn-secondary" style="margin-bottom: 2rem; width: 100%; justify-content: center; gap: 0.5rem; display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+                Show Menu Categories
+            </button>
+
+            <div class="shop-layout">
+
                 <!-- Sidebar Filter -->
                 <aside class="filter-sidebar">
                     <div class="filter-group">
-                        <h4 class="filter-title">Categories</h4>
+                        <h4 class="filter-title">Menu Categories</h4>
                         <ul class="filter-list">
-                            <li><label><input type="checkbox"> Books & Journals</label></li>
-                            <li><label><input type="checkbox"> Wedding Stationery</label></li>
-                            <li><label><input type="checkbox"> Greeting Cards</label></li>
-                            <li><label><input type="checkbox"> Loose Sheets</label></li>
-                            <li><label><input type="checkbox"> Ink & Supplies</label></li>
+                            <li><label><input type="checkbox" checked> Signature Melts</label></li>
+                            <li><label><input type="checkbox" checked> Value Combos</label></li>
+                            <li><label><input type="checkbox" checked> Tomato Soups &amp; Dippers</label></li>
+                            <li><label><input type="checkbox" checked> Loaded Tots &amp; Sides</label></li>
+                            <li><label><input type="checkbox" checked> Sweet Melts &amp; Drinks</label></li>
                         </ul>
                     </div>
-                    <div class="filter-group">
-                        <h4 class="filter-title">Edge Finish</h4>
+                    <div class="filter-group" style="margin-top: 3rem;">
+                        <h4 class="filter-title">Bread &amp; Crust Style</h4>
                         <ul class="filter-list">
-                            <li><label><input type="checkbox"> Deckled (Natural)</label></li>
-                            <li><label><input type="checkbox"> Gilt (Gold)</label></li>
-                            <li><label><input type="checkbox"> Straight Trimmed</label></li>
+                            <li><label><input type="checkbox"> 36h Artisan Sourdough</label></li>
+                            <li><label><input type="checkbox"> Golden Brioche</label></li>
+                            <li><label><input type="checkbox"> Gluten-Free Bread</label></li>
+                            <li><label><input type="checkbox"> Double Cheddar Crusted</label></li>
                         </ul>
                     </div>
                 </aside>
 
-                <!-- Grid -->
+                <!-- Grid wrapper for 4 columns -->
                 <div class="shop-grid">
                     <!-- Product 1 -->
                     <div class="product-card">
-                        <a href="product.html">
-                            <img src="assets/images/prod_sage.png" alt="Sage Pressed Cotton Suite" class="product-image">
-                        </a>
-                        <div class="product-info">
+                        <div class="product-image-wrap">
                             <a href="product.html">
-                                <h3 class="product-title">Sage Pressed Cotton Suite</h3>
+                                <img src="assets/images/hero_grilled_cheese.jpg" alt="The Classic 4-Cheese Gold Melt" class="product-image">
                             </a>
-                            <div class="price">$145.00</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">The Classic 4-Cheese Gold</h3>
+                            <div class="price">$11.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Wisconsin sharp cheddar, Gruyère, smoked Gouda &amp; melted Monterey Jack on garlic butter sourdough.</p>
                             <div class="product-actions">
-                                <button class="btn-primary" style="flex:1;">Add to Cart</button>
-                                <button class="btn-secondary" style="padding: 13px 15px;" aria-label="Wishlist">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                <a href="product.html" class="btn-primary flex-grow" style="text-align:center; text-decoration:none;">Order / Customize</a>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                     </svg>
                                 </button>
                             </div>
@@ -130,22 +160,20 @@
 
                     <!-- Product 2 -->
                     <div class="product-card">
-                        <a href="product.html">
-                            <img src="assets/images/prod_book.png" alt="Botanical Sketchbook" class="product-image">
-                        </a>
-                        <div class="product-info">
+                        <div class="product-image-wrap">
                             <a href="product.html">
-                                <h3 class="product-title">Botanical Sketchbook</h3>
+                                <img src="assets/images/truffle_bacon_melt.jpg" alt="Truffle Bacon Mac &amp; Cheese Melt" class="product-image">
                             </a>
-                            <div class="price">$65.00</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Truffle Bacon Mac Melt</h3>
+                            <div class="price">$14.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Creamy Gouda macaroni, crispy applewood smoked bacon, white truffle oil glaze on toasted brioche.</p>
                             <div class="product-actions">
-                                <button class="btn-primary" style="flex:1;">Add to Cart</button>
-                                <button class="btn-secondary" style="padding: 13px 15px;" aria-label="Wishlist">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                <a href="product.html" class="btn-primary flex-grow" style="text-align:center; text-decoration:none;">Order / Customize</a>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                     </svg>
                                 </button>
                             </div>
@@ -154,22 +182,20 @@
 
                     <!-- Product 3 -->
                     <div class="product-card">
-                        <a href="product.html">
-                            <img src="assets/images/prod_rsvp.png" alt="Handmade RSVP Set" class="product-image">
-                        </a>
-                        <div class="product-info">
+                        <div class="product-image-wrap">
                             <a href="product.html">
-                                <h3 class="product-title">Handmade RSVP Set</h3>
+                                <img src="assets/images/hero_grilled_cheese.jpg" alt="Smoked Brisket &amp; Jalapeño Melt" class="product-image">
                             </a>
-                            <div class="price">$110.00</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Smoked Brisket &amp; Jalapeño</h3>
+                            <div class="price">$15.00</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">12-hour pit smoked beef brisket, house pickled jalapeños, whipped cream cheese &amp; sharp cheddar.</p>
                             <div class="product-actions">
-                                <button class="btn-primary" style="flex:1;">Add to Cart</button>
-                                <button class="btn-secondary" style="padding: 13px 15px;" aria-label="Wishlist">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                <a href="product.html" class="btn-primary flex-grow" style="text-align:center; text-decoration:none;">Order / Customize</a>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                     </svg>
                                 </button>
                             </div>
@@ -178,148 +204,494 @@
 
                     <!-- Product 4 -->
                     <div class="product-card">
-                        <a href="product.html">
-                            <img src="assets/images/prod_envelopes.png" alt="Deckled Envelope Bundle" class="product-image">
-                        </a>
-                        <div class="product-info">
+                        <div class="product-image-wrap">
                             <a href="product.html">
-                                <h3 class="product-title">Deckled Envelopes</h3>
+                                <img src="assets/images/truffle_bacon_melt.jpg" alt="Pesto Caprese Sourdough Melt" class="product-image">
                             </a>
-                            <div class="price">$45.00</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Pesto Caprese Sourdough</h3>
+                            <div class="price">$12.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Fresh buffalo mozzarella, ripe heirloom tomatoes, wild basil pesto, and aged balsamic glaze.</p>
                             <div class="product-actions">
-                                <button class="btn-primary" style="flex:1;">Add to Cart</button>
-                                <button class="btn-secondary" style="padding: 13px 15px;" aria-label="Wishlist">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                <a href="product.html" class="btn-primary flex-grow" style="text-align:center; text-decoration:none;">Order / Customize</a>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- SHOP SECTION 1: THE CRAFT -->
-        <section class="section-overlap z-1 paper-texture" style="background:var(--bg-surface); padding: 8rem 2rem;">
-            <div class="section-divider-top divider-bg-surface">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="grid grid-2 stagger-container" style="align-items: center;">
-                <div class="stagger-item">
-                    <img src="assets/images/shop_process.png" alt="Handmade Paper Process" class="card-image-wrap"
-                        style="height:auto; width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lift);">
-                </div>
-                <div class="stagger-item" style="padding-left: 2rem;">
-                    <h3>The Vat & The Mesh</h3>
-                    <h2 style="margin: 1.5rem 0;">Patience in Every Pull</h2>
-                    <p>Every sheet in our collection is an individual masterpiece. Our artisans pull each page from the
-                        vat using traditional wooden molds, ensuring a natural deckled edge and a tactile quality that
-                        modern machinery simply cannot replicate.</p>
-                    <a href="about.html" class="btn-secondary" style="margin-top:2rem;">Our Process</a>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image-wrap">
+                            <a href="product.html">
+                                <img src="assets/images/hero_grilled_cheese.jpg" alt="Roasted Tomato Bisque Dipper" class="product-image">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Roasted Tomato Bisque Cup</h3>
+                            <div class="price">$6.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Slow-simmered San Marzano tomatoes, roasted garlic cream, sweet basil, and mini sourdough croutons.</p>
+                            <div class="product-actions">
+                                <button class="btn-primary flex-grow">Add Dipper</button>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card">
+                        <div class="product-image-wrap">
+                            <a href="product.html">
+                                <img src="assets/images/truffle_bacon_melt.jpg" alt="Garlic Parmesan Tater Tots" class="product-image">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Garlic Parmesan Crispy Tots</h3>
+                            <div class="price">$7.00</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Extra crispy golden potato tots tossed in garlic parsley butter and dusted with aged Parmesan cheese.</p>
+                            <div class="product-actions">
+                                <button class="btn-primary flex-grow">Add to Cart</button>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card">
+                        <div class="product-image-wrap">
+                            <a href="product.html">
+                                <img src="assets/images/hero_grilled_cheese.jpg" alt="Fried Mac &amp; Cheese Bites" class="product-image">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fried Mac &amp; Cheese Bites</h3>
+                            <div class="price">$8.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Six crispy panko-breaded bites oozing with four cheeses, served with house smoky chipotle ranch.</p>
+                            <div class="product-actions">
+                                <button class="btn-primary flex-grow">Add to Cart</button>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-card">
+                        <div class="product-image-wrap">
+                            <a href="product.html">
+                                <img src="assets/images/food_truck_exterior.jpg" alt="The Ultimate Truck Combo Box" class="product-image">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">The Ultimate Truck Combo</h3>
+                            <div class="price">$18.50</div>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Your choice of any Signature Melt + warm Tomato Bisque dipper + Garlic Tots + craft soda drink.</p>
+                            <div class="product-actions">
+                                <a href="product.html" class="btn-primary flex-grow" style="text-align:center; text-decoration:none;">Build Combo</a>
+                                <button class="btn-wishlist" aria-label="Add to Favorites">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- SHOP SECTION 2: THE FIBERS -->
-        <section class="section-overlap z-2" style="background:var(--bg-primary); padding: 6rem 2rem;">
-            <div class="section-divider-top divider-bg-primary">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="stagger-container" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h3 class="stagger-item">Sustainably Rooted</h3>
-                <h2 class="stagger-item" style="margin: 1rem 0;">Earth-First Materials</h2>
-                <p class="stagger-item">We use only archival-grade cotton linters and hand-foraged botanical inclusions.
-                    Our paper is 100% bleach-free and acid-neutral, preserving your words for generations without
-                    yellowing or decay.</p>
-                <div class="stagger-item" style="margin-top: 3rem;">
-                    <img src="assets/images/shop_materials.png" alt="Raw Fibers"
-                        style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-float);">
+        <style>
+            /* MENU DIPPERS SECTION */
+            .menu-dippers-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-top: 2rem;
+            }
+
+            .dipper-card {
+                background: var(--bg-card);
+                border-radius: var(--radius-lg);
+                border: 1px solid rgba(211, 84, 0, 0.12);
+                box-shadow: var(--shadow-float);
+                padding: 2.5rem 2rem;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .dipper-card:hover {
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-lift);
+            }
+
+            .dipper-badge {
+                position: absolute;
+                top: 1.25rem;
+                right: 1.25rem;
+                background: var(--color-primary-light);
+                color: var(--color-primary-dark);
+                font-size: 0.7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                padding: 4px 12px;
+                border-radius: 20px;
+            }
+
+            .dipper-icon {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                line-height: 1;
+            }
+
+            .dipper-card h3 {
+                font-family: var(--font-display);
+                font-size: 1.35rem;
+                color: var(--text-ink);
+                margin-bottom: 0.75rem;
+                text-transform: none;
+                letter-spacing: normal;
+            }
+
+            .dipper-desc {
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                flex-grow: 1;
+            }
+
+            .dipper-meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+                padding-top: 1rem;
+                margin-top: auto;
+                font-size: 0.85rem;
+            }
+
+            [data-theme="dark"] .dipper-meta {
+                border-top-color: rgba(255, 255, 255, 0.08);
+            }
+
+            .dipper-pair {
+                color: var(--text-muted);
+            }
+
+            .dipper-pair strong {
+                color: var(--color-primary);
+            }
+
+            .dipper-price {
+                font-family: var(--font-mono);
+                font-weight: 700;
+                color: var(--text-ink);
+            }
+
+            /* MENU CATERING BOX */
+            .menu-catering-box {
+                max-width: 1280px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                gap: 4rem;
+                align-items: center;
+            }
+
+            .catering-perks-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .perk-item {
+                display: flex;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .perk-icon {
+                font-size: 1.4rem;
+                line-height: 1;
+                background: var(--bg-surface);
+                width: 42px;
+                height: 42px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--radius-sm);
+                border: 1px solid rgba(211, 84, 0, 0.15);
+                flex-shrink: 0;
+            }
+
+            .perk-item strong {
+                display: block;
+                color: var(--text-ink);
+                font-size: 1rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .perk-item span {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                line-height: 1.5;
+                display: block;
+            }
+
+            .catering-cta-actions {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .catering-card-frame {
+                position: relative;
+                border-radius: var(--radius-lg);
+                overflow: visible;
+            }
+
+            .catering-main-img {
+                width: 100%;
+                height: 440px;
+                object-fit: cover;
+                border-radius: var(--radius-lg);
+                box-shadow: var(--shadow-lift);
+                display: block;
+            }
+
+            .catering-badge-stat {
+                position: absolute;
+                bottom: -20px;
+                left: 20px;
+                background: var(--bg-card);
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-float);
+                border: 1px solid rgba(211, 84, 0, 0.15);
+                padding: 1rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .catering-badge-stat .stat-big {
+                font-family: var(--font-display);
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: var(--color-primary);
+                line-height: 1;
+            }
+
+            .catering-badge-stat .stat-label {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                margin-top: 0.3rem;
+            }
+
+            @media (max-width: 1024px) {
+                .menu-dippers-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .menu-catering-box {
+                    grid-template-columns: 1fr;
+                    gap: 3rem;
+                }
+
+                .catering-main-img {
+                    height: 340px;
+                }
+            }
+
+            @media (max-width: 640px) {
+                .menu-dippers-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .catering-badge-stat {
+                    position: static;
+                    margin-top: 1rem;
+                }
+            }
+        </style>
+
+        <!-- MENU SECTION 2: PAIRING & DIPPERS SHOWCASE -->
+        <section class="section-overlap z-2" style="background:var(--bg-surface); padding: 5rem 2rem 6rem;">
+            <div style="max-width: 1280px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3.5rem;">
+                    <span style="color:var(--color-primary); font-family:var(--font-mono); font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.18em; display:inline-block; margin-bottom:0.5rem;">The Dipper Bar</span>
+                    <h2 style="font-size:clamp(2rem, 3.5vw, 2.8rem); line-height:1.2; margin-bottom:1rem;">The Perfect Sizzle Companions</h2>
+                    <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.7;">A truly transcendental grilled cheese needs a piping-hot dunk. Every soup dipper and loaded side is prepared in small batches on our truck daily.</p>
+                </div>
+
+                <div class="menu-dippers-grid">
+                    <!-- Dipper 1 -->
+                    <div class="dipper-card">
+                        <div class="dipper-badge">Signature Pairing</div>
+                        <div class="dipper-icon">🍅</div>
+                        <h3>Roasted San Marzano Bisque</h3>
+                        <p class="dipper-desc">6-hour slow-reduced plum tomatoes, roasted garlic cloves, fresh garden basil, and farm sweet cream. Thick enough to cling to crunchy sourdough grooves.</p>
+                        <div class="dipper-meta">
+                            <span class="dipper-pair">Best with: <strong>4-Cheese Gold</strong></span>
+                            <span class="dipper-price">$6.50 / Cup</span>
+                        </div>
+                    </div>
+
+                    <!-- Dipper 2 -->
+                    <div class="dipper-card">
+                        <div class="dipper-badge">Chef's Secret Dip</div>
+                        <div class="dipper-icon">🥓</div>
+                        <h3>Smoky Bacon Chipotle Dip</h3>
+                        <p class="dipper-desc">Creamy charred jalapeño &amp; chipotle crema blended with applewood smoked bacon cracklings and sharp cheddar. A savory, smoky flavor punch.</p>
+                        <div class="dipper-meta">
+                            <span class="dipper-pair">Best with: <strong>Truffle Mac Melt</strong></span>
+                            <span class="dipper-price">$2.50 / Dipper</span>
+                        </div>
+                    </div>
+
+                    <!-- Dipper 3 -->
+                    <div class="dipper-card">
+                        <div class="dipper-badge">Golden Crisp Side</div>
+                        <div class="dipper-icon">🥔</div>
+                        <h3>Garlic Parmesan Tots</h3>
+                        <p class="dipper-desc">Double-crisped potato rounds tossed hot from the fryer in melted garlic parsley butter, dusted generously with 18-month aged Parmesan cheese.</p>
+                        <div class="dipper-meta">
+                            <span class="dipper-pair">Best with: <strong>Brisket Melt</strong></span>
+                            <span class="dipper-price">$7.00 / Basket</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SHOP SECTION 3: THE GIFTING -->
-        <section class="section-overlap z-3" style="background:var(--bg-surface); padding: 8rem 2rem;">
-            <div class="section-divider-top divider-bg-surface">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        class="shape-fill"></path>
-                </svg>
-            </div>
-            <div class="grid grid-2 stagger-container" style="align-items: center;">
-                <div class="stagger-item" style="padding-right: 2rem;">
-                    <h3>Elevated Gifting</h3>
-                    <h2 style="margin: 1.5rem 0;">The Final Polish</h2>
-                    <p>Make every delivery an event. We offer bespoke gift wrapping featuring our signature handmade
-                        papers, hand-melted wax seals, and hand-torn silk ribbons—all included as an optional add-on at
-                        checkout.</p>
-                    <a href="contact.html" class="btn-primary" style="margin-top:2rem;">Inquire for Registry</a>
+        <!-- MENU SECTION 3: GROUP ORDERS & PARTY BOXES -->
+        <section class="section-overlap z-3" style="background:var(--bg-card); padding: 6rem 2rem; border-top: 1px solid rgba(211,84,0,0.1);">
+            <div class="menu-catering-box">
+                <div class="catering-box-content">
+                    <div style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--color-primary-light); color:var(--color-primary-dark); padding:0.35rem 0.9rem; border-radius:20px; font-weight:700; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.2rem;">
+                        <span>📦</span> Office Lunches &amp; Party Boxes
+                    </div>
+                    <h2 style="font-size:clamp(2rem, 3.5vw, 2.75rem); line-height:1.2; margin-bottom:1.2rem;">Feeding a Hungry Crowd? We Box The Sizzle.</h2>
+                    <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:2rem;">
+                        Skip boring boxed sandwiches. Our thermal-insulated party boxes hold up to 30 steaming melts, crispy tots, and warm tomato dippers—staying crunchy and oven-hot for up to 45 minutes after delivery.
+                    </p>
+
+                    <div class="catering-perks-list">
+                        <div class="perk-item">
+                            <div class="perk-icon">🔥</div>
+                            <div>
+                                <strong>45-Minute Hot Holding</strong>
+                                <span>Engineered steam vents prevent soggy crusts while locking in melted warmth.</span>
+                            </div>
+                        </div>
+                        <div class="perk-item">
+                            <div class="perk-icon">🏷️</div>
+                            <div>
+                                <strong>Individual Diet Labeling</strong>
+                                <span>Every item is labeled with guest name, gluten-free, or vegan notes for effortless distribution.</span>
+                            </div>
+                        </div>
+                        <div class="perk-item">
+                            <div class="perk-icon">🚚</div>
+                            <div>
+                                <strong>Doorstep or On-Site Truck</strong>
+                                <span>Get delivery straight to your office boardroom or book the actual retro food truck on-site.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catering-cta-actions">
+                        <a href="pricing.html" class="btn-primary">View Catering Packages</a>
+                        <a href="contact.html" class="btn-secondary">Request Party Quote</a>
+                    </div>
                 </div>
-                <div class="stagger-item">
-                    <img src="assets/images/shop_giftwrap.png" alt="Premium Gift Wrapping"
-                        style="width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lift);">
+
+                <div class="catering-box-visual">
+                    <div class="catering-card-frame">
+                        <img src="assets/images/food_truck_exterior.jpg" alt="Food Truck Melt Box Catering" class="catering-main-img">
+                        <div class="catering-badge-stat">
+                            <span class="stat-big">4.9 ★</span>
+                            <span class="stat-label">Rated by 250+ Office Teams</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                        <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="12" x="2" y="5" rx="2" />
+                        <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                        <circle cx="7" cy="18" r="2" fill="currentColor" />
+                        <circle cx="17" cy="18" r="2" fill="currentColor" />
+                        <path d="M6 9h4" />
+                        <path d="M14 9h4" />
+                        <path d="M9 18h6" />
+                        <path d="M9 2v3" />
+                        <path d="M15 2v3" />
                     </svg>
-                    Foliage Studio
+                    MELTY
                 </div>
-                <p>Pressed. Crafted. Remembered.</p>
+                <p>Nostalgic street comfort elevated to gourmet standards. Sizzling artisanal grilled cheese combos, rich roasted tomato bisque, and loaded comfort sides served hot from our retro truck across the city.</p>
             </div>
 
             <div>
                 <h3 class="footer-title">Explore</h3>
                 <nav class="footer-links">
-                    <a href="shop.html">Shop All</a>
-                    <a href="home-2.html">Premium Layout</a>
-                    <a href="product.html">Product Demo</a>
-                    <a href="pricing.html">Pricing Strategy</a>
+                    <a href="shop.html">Full Food Truck Menu</a>
+                    <a href="home-2.html">Find the Truck (Schedule)</a>
+                    <a href="product.html">Signature Combo Detail</a>
+                    <a href="pricing.html">Catering &amp; Party Packages</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">Studio</h3>
+                <h3 class="footer-title">The Truck</h3>
                 <nav class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Sign Up</a>
+                    <a href="about.html">Our Truck Story</a>
+                    <a href="journal.html">Truck Dispatch</a>
+                    <a href="contact.html">Book The Truck</a>
+                    <a href="login.html">Melt Club VIP Login</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">The Journal</h3>
-                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Sign up for studio updates and exclusive releases.
+                <h3 class="footer-title">Melt Alert Club</h3>
+                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Get secret melt drop alerts, weekly truck stops, and 10% off your first combo!
                 </p>
                 <form class="newsletter-form" onsubmit="event.preventDefault()">
-                    <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+                        aria-label="Email Address">
+                    <button type="submit" class="newsletter-btn">Join Club</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Foliage Studio. All rights reserved.</p>
+            <p>&copy; 2026 MELTY — Gourmet Grilled Cheese &amp; Comfort Food Truck. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#" class="social-icon social-facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24">
@@ -349,6 +721,12 @@
             </div>
         </div>
     </footer>
+
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>

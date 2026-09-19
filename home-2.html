@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Collection | Foliage Studio</title>
+    <title>Find the Truck | Gourmet Grilled Cheese &amp; Comfort Food Truck Schedule</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <meta name="description"
+        content="Track the Gourmet Grilled Cheese & Comfort Food Truck schedule. Live daily locations, brewery pop-ups, park stops, and weekend festival schedule.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;500;600&family=Courier+Prime&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -20,21 +22,29 @@
 <body>
     <header class="site-header">
         <a href="index.html" class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="12" x="2" y="5" rx="2" />
+                <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                <circle cx="7" cy="18" r="2" fill="currentColor" />
+                <circle cx="17" cy="18" r="2" fill="currentColor" />
+                <path d="M6 9h4" />
+                <path d="M14 9h4" />
+                <path d="M9 18h6" />
+                <path d="M9 2v3" />
+                <path d="M15 2v3" />
             </svg>
-            Foliage Studio
+            MELTY
         </a>
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html" class="active">Home 2</a>
-            <a href="shop.html">Shop</a>
-            <a href="product.html">Product</a>
-            <a href="about.html">About</a>
-            <a href="journal.html">Journal</a>
+            <a href="home-2.html" class="active">Find Truck</a>
+            <a href="shop.html">Menu</a>
+            <a href="pricing.html">Catering</a>
+            <a href="about.html">Our Story</a>
+            <a href="journal.html">Dispatch</a>
             <a href="contact.html">Contact</a>
+            <a href="contact.html" class="mobile-only btn-secondary">Booking Enquiry</a>
         </nav>
 
         <div class="header-actions">
@@ -47,15 +57,26 @@
                         <path d="m20 18-4 4-4-4" />
                     </svg>
                 </button>
-                <button class="header-icon theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                <button class="header-icon theme-toggle" aria-label="Switch to Dark Mode" title="Switch to Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                     </svg>
                 </button>
             </div>
 
             <div class="header-ctas">
-                <a href="login.html" class="btn-secondary">Wishlist</a>
+                <a href="contact.html" class="btn-secondary">Booking Enquiry</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -73,53 +94,67 @@
     <main>
         <!-- Home-2 Hero Vertical Split -->
         <section class="home-2-hero">
-            <div class="h2-hero-img-container">
-                <img src="assets/images/archive_hero.png" alt="Premium Collection" class="h2-hero-img">
-            </div>
             <div class="h2-hero-content paper-texture">
                 <div class="stagger-container">
-                    <h3 class="stagger-item">The Archive Edition</h3>
-                    <h1 class="stagger-item" style="margin: 1rem 0;">Exquisite Weight. Deep Impression.</h1>
-                    <p class="stagger-item" style="max-width: 400px; margin-bottom: 2.5rem; color: var(--text-ink);">Our
-                        most rigorous, dense cotton papers, created specifically for fine art printmakers and heavy hit
-                        letterpress.</p>
-                    <a href="shop.html" class="btn-primary stagger-item">View The Archive</a>
+                    <div style="display:inline-block; padding:0.4rem 1rem; background:var(--color-primary-light); color:var(--color-primary-dark); border-radius:20px; font-weight:700; font-size:0.8rem; margin-bottom:1rem;" class="stagger-item">
+                        🟢 TRUCK STATUS: LIVE ON LOCATION
+                    </div>
+                    <h1 class="stagger-item" style="margin: 0.5rem 0 1.5rem; font-size:clamp(2.5rem, 5vw, 4rem);">Find The Truck &amp; Weekly Schedule</h1>
+                    <p class="stagger-item"
+                        style="max-width: 460px; margin-bottom: 2rem; color: var(--text-ink); text-align: center; margin-left: auto; margin-right: auto; line-height:1.7;">
+                        Follow the irresistible aroma of griddled sourdough and melting artisan cheese! Check our live weekly parking spots, brewery evenings, and weekend street festivals.</p>
+                    <a href="#weekly-schedule" class="btn-primary stagger-item">View Weekly Route</a>
                 </div>
+            </div>
+            <div class="h2-hero-img-container">
+                <img src="assets/images/food_truck_exterior.jpg" alt="Find Gourmet Grilled Cheese Food Truck" class="h2-hero-img">
             </div>
         </section>
 
-        <!-- Home-2 Shop Section: Horizontal Scroll -->
-        <section class="section-overlap z-1" style="background:var(--bg-surface); padding-top:4rem;">
-            <div class="stagger-container" style="padding-left: 2rem;">
-                <h2 class="stagger-item">Curated Sets</h2>
-                <h3 class="stagger-item">Swipe to explore</h3>
+        <!-- Home-2 Shop Section: Horizontal Scroll / Schedule Stops -->
+        <section id="weekly-schedule" class="section-overlap z-1" style="background:var(--bg-surface); padding-top:4rem;">
+            <div class="stagger-container" style="text-align: center;">
+                <h2 class="stagger-item" style="font-size:clamp(2rem, 4vw, 3rem);">This Week's Truck Stops</h2>
+                <h3 class="stagger-item" style="color:var(--color-primary); font-family:var(--font-mono); font-size:0.9rem; text-transform:uppercase; letter-spacing:0.15em;">Updated every Monday morning</h3>
             </div>
 
             <div class="horiz-scroll-container stagger-container" style="margin-top:2rem;">
+                <!-- Stop 1 -->
                 <div class="horiz-card category-card card stagger-item">
-                    <img src="assets/images/set_minimalist.png" alt="Set 1">
-                    <div class="category-overlay"></div>
-                    <h2 class="category-title">Minimalist Suite</h2>
+                    <img src="assets/images/food_truck_exterior.jpg" alt="Downtown Stop">
+                    <div class="category-overlay" style="opacity:0.85; background:linear-gradient(to top, rgba(18,15,13,0.92) 0%, rgba(18,15,13,0.4) 60%, transparent 100%);"></div>
+                    <div style="position:absolute; bottom:1.5rem; left:1.5rem; right:1.5rem; z-index:5; color:#fff;">
+                        <span style="background:var(--color-primary); font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:4px; font-weight:700;">WED &amp; THU • LUNCH</span>
+                        <h3 style="font-size:1.4rem; margin:0.5rem 0 0.2rem; color:#fff;">Downtown Plaza Court</h3>
+                        <p style="font-size:0.85rem; opacity:0.9;">11:00 AM – 2:30 PM • 650 SW Broadway</p>
+                    </div>
                 </div>
+
+                <!-- Stop 2 -->
                 <div class="horiz-card category-card card stagger-item">
-                    <img src="assets/images/set_botanical.png" alt="Set 2">
-                    <div class="category-overlay"></div>
-                    <h2 class="category-title">Botanical Ed.</h2>
+                    <img src="assets/images/hero_grilled_cheese.jpg" alt="Brewery Stop">
+                    <div class="category-overlay" style="opacity:0.85; background:linear-gradient(to top, rgba(18,15,13,0.92) 0%, rgba(18,15,13,0.4) 60%, transparent 100%);"></div>
+                    <div style="position:absolute; bottom:1.5rem; left:1.5rem; right:1.5rem; z-index:5; color:#fff;">
+                        <span style="background:var(--color-secondary); font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:4px; font-weight:700;">FRIDAY • DINNER &amp; PINTS</span>
+                        <h3 style="font-size:1.4rem; margin:0.5rem 0 0.2rem; color:#fff;">Eastside Craft Brewery</h3>
+                        <p style="font-size:0.85rem; opacity:0.9;">4:30 PM – 9:30 PM • Craft Ale &amp; Melts</p>
+                    </div>
                 </div>
+
+                <!-- Stop 3 -->
                 <div class="horiz-card category-card card stagger-item">
-                    <img src="assets/images/set_midnight.png" alt="Set 3">
-                    <div class="category-overlay"></div>
-                    <h2 class="category-title">Midnight Ink</h2>
-                </div>
-                <div class="horiz-card category-card card stagger-item">
-                    <img src="assets/images/set_raw_cotton.png" alt="Set 4">
-                    <div class="category-overlay"></div>
-                    <h2 class="category-title">Raw Cotton</h2>
+                    <img src="assets/images/truffle_bacon_melt.jpg" alt="Weekend Park Stop">
+                    <div class="category-overlay" style="opacity:0.85; background:linear-gradient(to top, rgba(18,15,13,0.92) 0%, rgba(18,15,13,0.4) 60%, transparent 100%);"></div>
+                    <div style="position:absolute; bottom:1.5rem; left:1.5rem; right:1.5rem; z-index:5; color:#fff;">
+                        <span style="background:var(--color-primary); font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:4px; font-weight:700;">SAT &amp; SUN • ALL DAY</span>
+                        <h3 style="font-size:1.4rem; margin:0.5rem 0 0.2rem; color:#fff;">City Park Pavilion</h3>
+                        <p style="font-size:0.85rem; opacity:0.9;">10:30 AM – 5:00 PM • Weekend Street Fair</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Home-2 About: Editorial magazine style, typography only -->
+        <!-- Home-2 About: Editorial magazine style -->
         <section class="section-overlap z-2 paper-texture" style="background:var(--bg-card);">
             <div class="section-divider-top divider-bg-card">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -130,53 +165,46 @@
             </div>
 
             <div class="editorial-about stagger-container">
-                <h3 class="stagger-item">The Manifesto</h3>
-                <h2 class="pull-quote stagger-item" style="color:var(--text-ink); margin: 3rem 0;">A return to slowness.
-                    A departure from the digital ephemeral. We do not manufacture; we cultivate.</h2>
+                <h3 class="stagger-item" style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em;">The Food Truck Life</h3>
+                <h2 class="pull-quote stagger-item" style="color:var(--text-ink); margin: 2rem 0;">A sizzling griddle, the crisp snap of toasted sourdough, and honest street comfort served right to your hands.</h2>
                 <div style="column-count: 2; column-gap: 3rem; text-align: left;" class="stagger-item">
-                    <p>In a world of rigid perfection, Foliage Studio champions the accidental. The beauty of a deckled
-                        edge is that it cannot be precisely programmed. It is born from water pulling away from pulp, a
-                        natural separation that leaves a feathered, untamed border upon every single sheet.</p>
-                    <p>It demands to be felt. Your fingers understand the value before your eyes process the shade. The
-                        weight matters. The absorbency matters. We dedicate our craft to ensuring that when you press
-                        ink or foil into these fibers, they hold not just your words, but the gravity of your intent.
-                    </p>
+                    <p>There is nothing quite like hearing our commercial chrome griddle fire up in the morning stillness. Before the city wakes, we pick up fresh loaves of rustic country sourdough and brioche, slice artisan Wisconsin cheddar blocks, and start simmering our sweet basil tomato bisque.</p>
+                    <p>When the truck awning swings open at lunchtime, that first sandwich hits the buttered grill with a triumphant sizzle. We take pride in being your favorite mobile comfort sanctuary, serving food that brings genuine joy, big smiles, and that unforgettable cheese stretch.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Home-2 Features: Icon-less, text stats -->
+        <!-- Home-2 Features: Stats -->
         <section class="section-overlap z-3" style="background:var(--bg-primary); padding-top: 4rem;">
             <div class="stagger-container">
                 <div class="text-stats">
                     <div class="stagger-item">
+                        <div class="stat-num">50,000+</div>
+                        <div class="stat-label">Melts Served</div>
+                    </div>
+                    <div class="stagger-item">
                         <div class="stat-num">100%</div>
-                        <div class="stat-label">Archival Cotton</div>
+                        <div class="stat-label">Real Farm Cheeses</div>
                     </div>
                     <div class="stagger-item">
-                        <div class="stat-num">0%</div>
-                        <div class="stat-label">Bleach & Acid</div>
+                        <div class="stat-num">6 Hours</div>
+                        <div class="stat-label">Tomato Soup Simmer</div>
                     </div>
                     <div class="stagger-item">
-                        <div class="stat-num">4,000+</div>
-                        <div class="stat-label">Sheets Pulled</div>
-                    </div>
-                    <div class="stagger-item">
-                        <div class="stat-num">7</div>
-                        <div class="stat-label">Days to Cure</div>
+                        <div class="stat-num">4.9 ★</div>
+                        <div class="stat-label">Truck Fan Rating</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Home-2 Testimonials: Single large card -->
+        <!-- Home-2 Testimonials -->
         <section class="section-overlap z-4" style="background:var(--bg-surface); padding: 6rem 2rem;">
             <div class="stagger-container">
                 <div class="testimonial-card stagger-item" style="max-width: 900px; margin: 0 auto; text-align:center;">
                     <span class="quote-mark">“</span>
-                    <h2 class="pull-quote" style="margin-top:0;">The tactile feedback from their sage collection
-                        entirely elevated our winter tablescapes. It felt impossible to bend without reverence.</h2>
-                    <p class="testimonial-author">Claire M., Creative Director</p>
+                    <h2 class="pull-quote" style="margin-top:0;">Whenever we spot the yellow truck parked outside the brewery on Fridays, our entire group cancels all other dinner plans. Their Truffle Bacon Mac Melt is unmatched.</h2>
+                    <p class="testimonial-author">Liam K., Food Truck Regular &amp; Local Brewer</p>
                 </div>
             </div>
         </section>
@@ -192,11 +220,12 @@
             </div>
 
             <div class="stagger-container" style="position:relative; z-index:2;">
-                <h3 class="stagger-item" style="color:var(--color-primary);">Join the Registry</h3>
-                <h2 class="stagger-item" style="color:#F7F0E6; margin: 1rem 0;">Bespoke Inquiries Open</h2>
-                <p class="stagger-item" style="color:var(--text-muted); max-width:500px; margin: 0 auto 2rem;">Taking
-                    commissions for custom dyed lots and personalized botanical inclusions.</p>
-                <a href="contact.html" class="btn-primary stagger-item">Request a Sample Book</a>
+                <h3 class="stagger-item" style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em;">Private Events &amp; Festivals</h3>
+                <h2 class="stagger-item" style="color:#F7F0E6; margin: 1rem 0;">Want Our Food Truck At Your Event?</h2>
+                <p class="stagger-item" style="color:#F7F0E6; opacity: 0.85; max-width:550px; margin: 0 auto 2rem;">
+                    We roll directly to your venue for corporate parties, weddings, reunions, and school festivals. Hot custom melts cooked on-site!</p>
+
+                <a href="contact.html" class="btn-primary stagger-item">Book The Food Truck</a>
             </div>
         </section>
     </main>
@@ -206,47 +235,56 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12 2C8 6 4 12 8 18c2.5 3.5 6.5 4 8 0 4-10-4-16-4-16z" />
-                        <circle cx="16" cy="7" r="1.5" class="brand-dot" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="12" x="2" y="5" rx="2" />
+                        <path d="M20 10h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2" />
+                        <circle cx="7" cy="18" r="2" fill="currentColor" />
+                        <circle cx="17" cy="18" r="2" fill="currentColor" />
+                        <path d="M6 9h4" />
+                        <path d="M14 9h4" />
+                        <path d="M9 18h6" />
+                        <path d="M9 2v3" />
+                        <path d="M15 2v3" />
                     </svg>
-                    Foliage Studio
+                    MELTY
                 </div>
-                <p>Pressed. Crafted. Remembered.</p>
+                <p>Nostalgic street comfort elevated to gourmet standards. Sizzling artisanal grilled cheese combos, rich roasted tomato bisque, and loaded comfort sides served hot from our retro truck across the city.</p>
             </div>
 
             <div>
                 <h3 class="footer-title">Explore</h3>
                 <nav class="footer-links">
-                    <a href="shop.html">Shop All</a>
-                    <a href="home-2.html">Premium Layout</a>
-                    <a href="product.html">Product Demo</a>
-                    <a href="pricing.html">Pricing Strategy</a>
+                    <a href="shop.html">Full Food Truck Menu</a>
+                    <a href="home-2.html">Find the Truck (Schedule)</a>
+                    <a href="product.html">Signature Combo Detail</a>
+                    <a href="pricing.html">Catering &amp; Party Packages</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">Studio</h3>
+                <h3 class="footer-title">The Truck</h3>
                 <nav class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="login.html">Login</a>
-                    <a href="register.html">Sign Up</a>
+                    <a href="about.html">Our Truck Story</a>
+                    <a href="journal.html">Truck Dispatch</a>
+                    <a href="contact.html">Book The Truck</a>
+                    <a href="login.html">Melt Club VIP Login</a>
                 </nav>
             </div>
 
             <div>
-                <h3 class="footer-title">The Journal</h3>
-                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Sign up for studio updates and exclusive releases.
+                <h3 class="footer-title">Melt Alert Club</h3>
+                <p style="font-size:0.9rem; margin-bottom: 0.5rem;">Get secret melt drop alerts, weekly truck stops, and 10% off your first combo!
                 </p>
                 <form class="newsletter-form" onsubmit="event.preventDefault()">
-                    <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                    <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+                        aria-label="Email Address">
+                    <button type="submit" class="newsletter-btn">Join Club</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Foliage Studio. All rights reserved.</p>
+            <p>&copy; 2026 MELTY — Gourmet Grilled Cheese &amp; Comfort Food Truck. All rights reserved.</p>
             <div class="social-icons">
                 <a href="#" class="social-icon social-facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24">
@@ -276,6 +314,12 @@
             </div>
         </div>
     </footer>
+
+    <button class="move-to-top" id="moveToTop" aria-label="Move to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
 </body>
 
 </html>
