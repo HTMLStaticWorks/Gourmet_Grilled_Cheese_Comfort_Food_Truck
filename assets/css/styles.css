@@ -77,10 +77,12 @@
     --text-faint: #9E8C82;
 
     --color-primary: #F39C12;
-    --color-primary-light: #5A2E05;
+    --color-primary-light: rgba(243, 156, 18, 0.18);
+    --color-primary-dark: #FFB03B;
 
     --color-secondary: #E74C3C;
     --color-secondary-light: #4A1913;
+    --color-secondary-dark: #FF7675;
 
     --bg-primary-rgb: 18, 15, 13;
 
@@ -1983,12 +1985,14 @@ textarea.form-control {
 .pricing-card {
     padding: 3rem 2rem;
     position: relative;
+    overflow: visible;
     /* Anti-gravity applied via .card base */
 }
 
 .pricing-card.popular {
     border: 2px solid var(--color-primary);
     transform: translateY(-10px);
+    overflow: visible;
 }
 
 .pricing-card.popular:hover {
@@ -1997,17 +2001,28 @@ textarea.form-control {
 
 .popular-badge {
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-primary-light);
     color: var(--color-primary-dark);
+    border: 1px solid rgba(211, 84, 0, 0.2);
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    padding: 4px 12px;
+    padding: 5px 16px;
     border-radius: 20px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .popular-badge {
+    background: #2E1B0E;
+    color: #FFB03B;
+    border-color: rgba(243, 156, 18, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .pricing-title {
@@ -2530,11 +2545,108 @@ textarea.form-control {
 @media (max-width: 640px) {
     .menu-dippers-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .menu-dippers-grid .dipper-card:last-child:nth-child(odd) {
+        max-width: 100%;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Fix dipper card layout on mobile */
+    .dipper-card {
+        padding: 1.5rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dipper-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
+    .dipper-desc {
+        width: 100%;
+    }
+
+    .dipper-meta {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+
+    /* Fix Office Lunches & Party Boxes section alignment on mobile */
+    .menu-catering-box {
+        gap: 2.25rem;
+    }
+
+    .catering-box-content h2 {
+        font-size: 1.75rem;
+        word-break: break-word;
+    }
+
+    .catering-box-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .catering-perks-list {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .perk-item {
+        align-items: flex-start;
+        gap: 0.85rem;
+    }
+
+    .perk-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .catering-cta-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .catering-cta-actions .btn-primary,
+    .catering-cta-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .catering-card-frame {
+        width: 100%;
+        position: relative;
+    }
+
+    .catering-main-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/10;
+        max-height: 280px;
+        object-fit: cover;
     }
 
     .catering-badge-stat {
         position: static;
         margin-top: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        padding: 1rem;
     }
 }
 
@@ -2858,8 +2970,15 @@ textarea.form-control {
     }
 
     .page-header-media {
-        max-width: 680px;
+        max-width: 580px;
         margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-header-img-wrap {
         width: 100%;
     }
 
@@ -2871,6 +2990,9 @@ textarea.form-control {
         margin: 1.25rem auto 0;
         transform: none !important;
         animation: none;
+        width: auto;
+        max-width: 90%;
+        box-sizing: border-box;
     }
 
     [dir="rtl"] .hero-floating-badge {
@@ -2898,6 +3020,15 @@ textarea.form-control {
         aspect-ratio: 4 / 3;
         border-radius: var(--radius-lg);
     }
+
+    .hero-floating-badge {
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
 }
 
 /* PREMIUM VARIANT TWEAKS */
@@ -2922,6 +3053,16 @@ textarea.form-control {
     text-align: center;
     padding: 4rem;
     background: var(--bg-primary);
+}
+
+.status-pill {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] .status-pill {
+    background: rgba(243, 156, 18, 0.16) !important;
+    color: #FFB03B !important;
+    border-color: rgba(243, 156, 18, 0.35) !important;
 }
 
 
