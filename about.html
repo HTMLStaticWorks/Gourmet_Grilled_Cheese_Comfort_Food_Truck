@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="description"
         content="Learn the story of our retro gourmet grilled cheese food truck. Discover how our passion for artisan sourdough, farm cheeses, and nostalgic comfort food began.">
 
@@ -94,6 +94,38 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .anatomy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 1024px) and (min-width: 601px) {
+            .anatomy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .anatomy-grid > div:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 1rem);
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .anatomy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .anatomy-grid > div:last-child:nth-child(odd) {
+                grid-column: auto;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
     </style>
 </head>
 
@@ -116,7 +148,7 @@
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Find Truck</a>
+            <a href="home-2.html">Home 2</a>
             <a href="shop.html">Menu</a>
             <a href="pricing.html">Catering</a>
             <a href="about.html" class="active">Our Story</a>
@@ -181,7 +213,7 @@
                 </div>
                 <div class="page-header-media">
                     <div class="page-header-img-wrap">
-                        <img src="assets/images/hero_grilled_cheese.jpg" alt="Born On The Sizzle - Melty Story" class="page-header-img">
+                        <img src="assets/images/pizza_melt.jpg" alt="Born On The Sizzle - Melty Story" class="page-header-img">
                     </div>
                     <div class="hero-floating-badge">
                         <div class="floating-badge-icon">🚚</div>
@@ -232,7 +264,7 @@
                     <a href="home-2.html" class="btn-primary">Find Our Daily Stops</a>
                 </div>
                 <div class="slow-zoom" style="box-shadow:var(--shadow-lift);">
-                    <img src="assets/images/food_truck_exterior.jpg" alt="Our Retro Food Truck on Location">
+                    <img src="assets/images/food_truck_new.jpg" alt="Our Retro Food Truck on Location">
                 </div>
             </div>
         </section>
@@ -241,7 +273,7 @@
         <section style="padding: 6rem 2rem; max-width:1200px; margin:0 auto; text-align:center;">
             <h3 style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.5rem;">The Magic Formula</h3>
             <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:1.5rem;">The Anatomy of a Perfect Melt</h2>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; margin-top:3rem;">
+            <div class="anatomy-grid">
                 <div style="background:var(--bg-card); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(211,84,0,0.1); box-shadow:var(--shadow-float);">
                     <div style="font-size:2.5rem; margin-bottom:0.5rem;">🍞</div>
                     <h4 style="font-size:1.3rem; margin-bottom:0.5rem;">The Crunch</h4>

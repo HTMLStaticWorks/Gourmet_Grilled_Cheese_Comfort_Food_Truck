@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truck Dispatch &amp; Stories | Gourmet Grilled Cheese &amp; Comfort Food Truck</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="description"
         content="Stories from the road, secret menu melt drops, artisan sourdough techniques, and cheese pull wisdom from our food truck crew.">
 
@@ -81,10 +81,66 @@
             color: var(--color-primary);
         }
 
+        .featured-dispatch-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(211, 84, 0, 0.12);
+            box-shadow: var(--shadow-lift);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+        }
+
+        .featured-dispatch-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 350px;
+            display: block;
+        }
+
+        .featured-dispatch-content {
+            padding: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            .featured-dispatch-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-dispatch-img {
+                min-height: 240px;
+                max-height: 340px;
+                height: 280px;
+            }
+
+            .featured-dispatch-content {
+                padding: 2.25rem 1.75rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .journal-grid {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .journal-featured-section {
+                padding: 2rem 1rem 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-dispatch-content {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .featured-dispatch-img {
+                height: 220px;
+                min-height: 200px;
             }
         }
     </style>
@@ -109,7 +165,7 @@
 
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="home-2.html">Find Truck</a>
+            <a href="home-2.html">Home 2</a>
             <a href="shop.html">Menu</a>
             <a href="pricing.html">Catering</a>
             <a href="about.html">Our Story</a>
@@ -188,10 +244,10 @@
         </section>
 
         <!-- Main Featured Article -->
-        <section style="padding: 3rem 2rem 1rem; max-width: 1200px; margin: 0 auto;">
-            <div style="background:var(--bg-card); border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(211,84,0,0.12); box-shadow:var(--shadow-lift); display:grid; grid-template-columns: 1.2fr 1fr; align-items:center;">
-                <img src="assets/images/hero_grilled_cheese.jpg" alt="Secret Menu Drops" style="width:100%; height:100%; object-fit:cover; min-height:350px;">
-                <div style="padding:3rem;">
+        <section class="journal-featured-section" style="padding: 3rem 2rem 1rem; max-width: 1200px; margin: 0 auto;">
+            <div class="featured-dispatch-card">
+                <img src="assets/images/pizza_melt.jpg" alt="Secret Menu Drops" class="featured-dispatch-img">
+                <div class="featured-dispatch-content">
                     <span style="color:var(--color-primary); font-family:var(--font-mono); font-size:0.8rem; font-weight:700; text-transform:uppercase;">Secret Melt Drop • September 2026</span>
                     <h2 style="font-family:var(--font-display); font-size:clamp(1.8rem, 3vw, 2.4rem); margin:0.8rem 0; line-height:1.2;">Introducing: The Smoked Hot Honey Brisket Melt</h2>
                     <p style="color:var(--text-muted); line-height:1.7; margin-bottom:1.5rem;">We partnered with local pitmasters to infuse 14-hour smoked beef brisket with habanero wild honey and aged white cheddar. Dropping this Friday exclusively at our brewery stop!</p>
@@ -219,7 +275,7 @@
                 <!-- Article 2 -->
                 <a href="home-2.html" class="article-card">
                     <div class="article-img-wrap">
-                        <img src="assets/images/food_truck_exterior.jpg" alt="Food Truck Festival Tour">
+                        <img src="assets/images/food_truck_new.jpg" alt="Food Truck Festival Tour">
                     </div>
                     <div class="article-meta">
                         <span>Life On Wheels</span>
@@ -232,7 +288,7 @@
                 <!-- Article 3 -->
                 <a href="product.html" class="article-card">
                     <div class="article-img-wrap">
-                        <img src="assets/images/hero_grilled_cheese.jpg" alt="Tomato Bisque Recipe">
+                        <img src="assets/images/cheese_sauce.jpg" alt="Tomato Bisque Recipe">
                     </div>
                     <div class="article-meta">
                         <span>Kitchen Secrets</span>

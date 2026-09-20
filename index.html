@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gourmet Grilled Cheese & Comfort Food Truck | Signature Melts & Comfort Classics</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>🧀</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <meta name="description"
         content="Playful, nostalgic gourmet grilled cheese combos, velvety roasted tomato bisque, and loaded comfort sides served hot from our vintage food truck. Find our stops or book catering today!">
 
@@ -55,7 +55,7 @@
         <!-- Main Nav -->
         <nav class="nav-links">
             <a href="index.html" class="active">Home</a>
-            <a href="home-2.html">Find Truck</a>
+            <a href="home-2.html">Home 2</a>
             <a href="shop.html">Menu</a>
             <a href="pricing.html">Catering</a>
             <a href="about.html">Our Story</a>
@@ -147,21 +147,6 @@
                 align-items: center;
                 position: relative;
                 z-index: 5;
-            }
-
-            @media (max-width: 1024px) {
-                .new-hero {
-                    height: auto;
-                    padding: 4rem 0;
-                }
-
-                .new-hero-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .hero-bg-accent {
-                    display: none;
-                }
             }
 
             .hero-text-content {
@@ -282,23 +267,106 @@
             @media (max-width: 1024px) {
                 .new-hero {
                     height: auto;
-                    min-height: calc(100vh - 52px);
-                    padding: 5rem 0 3rem;
+                    min-height: auto;
+                    padding: 5rem 1rem 4rem;
+                    overflow: visible;
                 }
-                .new-hero-grid { grid-template-columns: 1fr; }
-                .hero-bg-accent { display: none; }
-                .hero-text-content { padding: 0 2rem; }
-                .hero-images-container { padding-right: 0; margin-top: 2.5rem; }
-                .hero-floating-card { left: 5%; bottom: 5%; }
+                .new-hero-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+                .hero-bg-accent {
+                    display: none;
+                }
+                .hero-text-content {
+                    padding: 0 1.5rem;
+                }
+                .hero-images-container {
+                    padding: 0 1.5rem;
+                    margin-top: 1.5rem;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+                .hero-img-stack {
+                    width: 100%;
+                    max-width: 580px;
+                    height: auto;
+                    position: relative;
+                }
+                .hero-img-main {
+                    width: 100%;
+                    height: auto;
+                    max-height: 420px;
+                    display: block;
+                }
+                .hero-floating-card {
+                    position: relative;
+                    left: auto;
+                    bottom: auto;
+                    margin: -2.5rem auto 0;
+                    width: calc(100% - 2rem);
+                    max-width: 360px;
+                    animation: none;
+                }
             }
 
             @media (max-width: 768px) {
-                .hero-text-content { padding: 0 1.5rem; text-align: center; }
-                .hero-text-content h1 { font-size: clamp(1.85rem, 6vw, 2.4rem); }
-                .hero-text-content p { margin: 0 auto 2.5rem; border-left: none; border-top: 3px solid var(--color-primary-mid); padding: 1.25rem 0 0; }
-                .new-hero .hero-ctas { justify-content: center !important; }
-                .hero-images-container { min-height: 320px; }
-                .hero-floating-card { position: relative; left: auto; bottom: auto; margin: 1rem auto 0; text-align: left; }
+                .new-hero {
+                    padding: 4.5rem 0.5rem 3.5rem;
+                }
+                .hero-text-content {
+                    padding: 0 1rem;
+                    text-align: center;
+                }
+                .hero-text-content h1 {
+                    font-size: clamp(1.85rem, 6vw, 2.4rem);
+                }
+                .hero-text-content p {
+                    margin: 0 auto 2rem;
+                    border-left: none;
+                    border-top: 3px solid var(--color-primary-mid);
+                    padding: 1.25rem 0 0;
+                }
+                .new-hero .hero-ctas {
+                    justify-content: center !important;
+                }
+                .hero-images-container {
+                    padding: 0 0.5rem;
+                    margin-top: 1.5rem;
+                    min-height: auto;
+                    height: auto;
+                }
+                .hero-img-stack {
+                    width: 100%;
+                    max-width: 480px;
+                    height: auto;
+                }
+                .hero-img-main {
+                    max-height: 320px;
+                    height: auto;
+                    width: 100%;
+                }
+                .hero-floating-card {
+                    position: relative;
+                    left: auto;
+                    bottom: auto;
+                    margin: -2rem auto 0;
+                    width: calc(100% - 1.5rem);
+                    max-width: 330px;
+                    padding: 1.25rem 1.25rem;
+                    text-align: left;
+                    animation: none;
+                }
+            }
+
+            @media (max-width: 1024px) and (min-width: 769px) {
+                .testimonial-grid > .testimonial-card:last-child:nth-child(odd) {
+                    grid-column: 1 / -1;
+                    max-width: calc(50% - 1.25rem);
+                    margin: 0 auto;
+                    width: 100%;
+                }
             }
         </style>
 
@@ -364,7 +432,7 @@
                     <h2 class="category-title">Loaded Tots &amp; Mac Bites</h2>
                 </a>
                 <a href="home-2.html" class="category-card stagger-item card">
-                    <img src="assets/images/food_truck_exterior.jpg" alt="Find the Food Truck">
+                    <img src="assets/images/food_truck_new.jpg" alt="Find the Food Truck">
                     <div class="category-overlay"></div>
                     <h2 class="category-title">Find The Truck Schedule</h2>
                 </a>
@@ -414,7 +482,7 @@
             <div class="grid grid-2 feature-grid stagger-container">
                 <div class="card stagger-item">
                     <div class="card-image-wrap" style="height:180px; overflow:hidden; border-radius:var(--radius-md);">
-                        <img src="assets/images/hero_grilled_cheese.jpg" alt="Artisan Cheese Blend" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="assets/images/pizza_melt.jpg" alt="Artisan Cheese Blend" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -441,7 +509,7 @@
 
                 <div class="card stagger-item">
                     <div class="card-image-wrap" style="height:180px; overflow:hidden; border-radius:var(--radius-md);">
-                        <img src="assets/images/hero_grilled_cheese.jpg" alt="Tomato Bisque Dipper" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="assets/images/cheese_sauce.jpg" alt="Tomato Bisque Dipper" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -458,7 +526,7 @@
 
                 <div class="card stagger-item">
                     <div class="card-image-wrap" style="height:180px; overflow:hidden; border-radius:var(--radius-md);">
-                        <img src="assets/images/food_truck_exterior.jpg" alt="Fresh Griddle Cooking" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="assets/images/food_truck_new.jpg" alt="Fresh Griddle Cooking" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
