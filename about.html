@@ -126,6 +126,74 @@
                 margin: 0;
             }
         }
+        .story-split-section {
+            padding: 6rem 2rem;
+        }
+
+        .story-split-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-split-content {
+            text-align: left;
+        }
+
+        [dir="rtl"] .story-split-content {
+            text-align: right;
+        }
+
+        .story-split-media {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .story-split-media img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .story-split-section {
+                padding: 4.5rem 2rem;
+            }
+
+            .story-split-container {
+                grid-template-columns: 1fr;
+                gap: 2.75rem;
+                max-width: 720px;
+                margin: 0 auto;
+            }
+
+            .story-split-content {
+                text-align: left;
+            }
+
+            [dir="rtl"] .story-split-content {
+                text-align: right;
+            }
+
+            .story-split-media {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .story-split-section {
+                padding: 3.5rem 1.25rem;
+            }
+
+            .story-split-container {
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -250,9 +318,9 @@
         </section>
 
         <!-- Story Split Section -->
-        <section class="section-overlap z-2" style="background:var(--bg-surface); padding: 6rem 2rem;">
-            <div style="max-width: 1200px; margin: 0 auto; display:grid; grid-template-columns: 1fr 1fr; gap:4rem; align-items:center;">
-                <div>
+        <section class="section-overlap z-2 story-split-section" style="background:var(--bg-surface);">
+            <div class="story-split-container">
+                <div class="story-split-content">
                     <h3 style="color:var(--color-primary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:0.5rem;">From Dream to Wheels</h3>
                     <h2 style="font-size:clamp(2rem, 3.5vw, 2.8rem); margin-bottom:1.5rem; line-height:1.2;">How We Built The Ultimate Melt Truck</h2>
                     <p style="color:var(--text-muted); margin-bottom:1.5rem; line-height:1.8;">
@@ -263,7 +331,7 @@
                     </p>
                     <a href="home-2.html" class="btn-primary">Find Our Daily Stops</a>
                 </div>
-                <div class="slow-zoom" style="box-shadow:var(--shadow-lift);">
+                <div class="story-split-media slow-zoom" style="box-shadow:var(--shadow-lift);">
                     <img src="assets/images/food_truck_new.jpg" alt="Our Retro Food Truck on Location">
                 </div>
             </div>
